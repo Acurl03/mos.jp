@@ -1,11 +1,17 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  list-style: none;
 }
 
 body {
   margin: 0;
   padding: 0;
-  list-style: none;
+}
+
+header nav svg {
+  width: 67px;
+  height: 60px;
+  z-index: 1;
 }
 /*# sourceMappingURL=index.css.map */
