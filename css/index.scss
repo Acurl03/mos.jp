@@ -40,8 +40,6 @@ header {
         align-items: center;
         justify-content: space-between;
 
-        margin-left: -30px;
-
         .nav-link-items {
           display: flex;
           margin: 0 -30px;
@@ -63,6 +61,12 @@ header {
 
             a {
               font-size: 14px;
+              color: #000;
+              transition: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+              &:hover {
+                opacity: 0.3;
+              }
             }
           }
         }
@@ -78,36 +82,59 @@ header {
           }
 
           .link-utility-login {
-            display: flex;
-            align-items: center;
             font-size: 12px;
-            &::before {
-              content: '';
-              display: block;
-              width: 11px;
-              height: 15px;
-              background: url(../img/icon/user_black.svg) no-repeat;
-              background-size: 11px 15px;
-              margin-right: 7px;
-              position: relative;
-              top: -1px;
+
+            a {
+              display: flex;
+              align-items: center;
+
+              color: #000;
+              transition: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+              &::before {
+                content: '';
+                display: block;
+                width: 11px;
+                height: 15px;
+                background: url(../img/icon/user_black.svg) no-repeat;
+                background-size: 11px 15px;
+                margin-right: 7px;
+                position: relative;
+                top: -1px;
+              }
+
+              &:hover {
+                opacity: 0.3;
+              }
             }
           }
 
           .link-utility-lang {
-            display: flex;
-            align-items: center;
             font-size: 12px;
-            &::before {
-              content: '';
-              display: block;
-              width: 11px;
-              height: 15px;
-              background: url(../img/icon/globe_black.svg) no-repeat;
-              background-size: 11px 15px;
-              margin-right: 7px;
-              position: relative;
-              top: -1px;
+
+            a {
+              display: flex;
+              align-items: center;
+              
+              font-size: 14px;
+              color: #000;
+              transition: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+              &::before {
+                content: '';
+                display: block;
+                width: 11px;
+                height: 15px;
+                background: url(../img/icon/globe_black.svg) no-repeat;
+                background-size: 11px 15px;
+                margin-right: 7px;
+                position: relative;
+                top: -1px;
+              }
+
+              &:hover {
+                opacity: 0.3;
+              }
             }
           }
         }
