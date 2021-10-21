@@ -1,20 +1,136 @@
 * {
   box-sizing: border-box;
   list-style: none;
+  text-decoration: none;
 }
 
 body {
   margin: 0;
   padding: 0;
-  
 }
 
 header {
-  nav {
-    svg {
+  width: 100%;
+  .nav-wrap {
+    display: flex;
+    max-width: 1200px;
+    width: calc(100vw - 50px * 2);
+    margin: 0 auto;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    left: 0;
+    z-index: 100;
+
+    .logo {
       width: 67px;
       height: 60px;
-      z-index: 1;
+      svg {
+        width: 67px;
+        height: 60px;
+        z-index: 1;
+      }
+    }
+    .nav-container {
+      flex: 1;
+      margin-left: 50px;
+
+      .nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin-left: -30px;
+
+        .nav-link-items {
+          display: flex;
+          margin: 0 -30px;
+          padding: 0;
+
+          .m-home,
+          .m-nav-none {
+            display: none;
+            @media screen and (max-width: 1023px) {
+              display: block;
+            }
+          }
+
+          li {
+            margin: 0 30px;
+            @media screen and (max-width: 1199px) {
+              margin: 0 15px;
+            }
+
+            a {
+              font-size: 14px;
+            }
+          }
+        }
+        .nav-link-utility {
+          display: flex;
+          padding: 0;
+          li {
+            padding: 0 10px;
+            border-left: 1px solid #000;
+            &:first-child {
+              border: none;
+            }
+          }
+
+          .link-utility-login {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            &::before {
+              content: '';
+              display: block;
+              width: 11px;
+              height: 15px;
+              background: url(../img/icon/user_black.svg) no-repeat;
+              background-size: 11px 15px;
+              margin-right: 7px;
+              position: relative;
+              top: -1px;
+            }
+          }
+
+          .link-utility-lang {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            &::before {
+              content: '';
+              display: block;
+              width: 11px;
+              height: 15px;
+              background: url(../img/icon/globe_black.svg) no-repeat;
+              background-size: 11px 15px;
+              margin-right: 7px;
+              position: relative;
+              top: -1px;
+            }
+          }
+        }
+        .m-nav-info {
+          display: none;
+          @media screen and (max-width: 1023px) {
+            display: block;
+          }
+        }
+      }
+      // mobile
+      .m-nav-simple {
+        display: none;
+        @media screen and (max-width: 1023px) {
+          display: block;
+        }
+      }
+      .m-nav-btn {
+        display: none;
+        @media screen and (max-width: 1023px) {
+          display: block;
+        }
+      }
     }
   }
 }
