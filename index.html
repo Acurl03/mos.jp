@@ -101,7 +101,7 @@
         <div class="nav-link">
           <ul class="nav-link-items">
             <!-- mobile home:before -->
-            <li class="m-home"><a href=""><img src="" alt=""></a></li>
+            <li class="m-home"><a href=""></a></li>
             <li><a href="">メニュー</a></li>
             <li><a href="">店舗・サービス</a></li>
             <li><a href="">キャンペーン</a></li>
@@ -130,12 +130,34 @@
           </ul>
         </div>
         <!-- 漢堡標按下會出現PC版的link，就是上面三區塊-->
-        <button class="m-nav-btn"></button>
+        <button class="m-nav-btn">
+          <span class="top_bar bar"></span>
+          <span class="mid_bar bar"></span>
+          <span class="bot_bar bar"></span>
+        </button>
         <!-- mobile END -->
       </div>
     </nav>
   </header>
 
 </body>
+<script>
+  const btn = document.querySelector('.m-nav-btn')
+  const btn_top = document.querySelector('.top_bar')
+  const btn_mid = document.querySelector('.mid_bar')
+  const btn_bot = document.querySelector('.bot_bar')
+  const m_menu = document.querySelector('.nav-link')
+  
+  console.log(m_menu)
+
+
+  btn.addEventListener('click', function () {
+    btn_top.classList.toggle("btn_open")
+    btn_mid.classList.toggle("btn_open")
+    btn_bot.classList.toggle("btn_open")
+    m_menu.classList.toggle("btn_open")
+  })
+
+</script>
 
 </html>
