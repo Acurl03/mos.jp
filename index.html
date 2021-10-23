@@ -20,7 +20,7 @@
 
 <body>
 
-  <header>
+  <header class="header-section">
     <nav class="nav-wrap">
       <div class="logo">
         <a
@@ -147,10 +147,13 @@
   const btn_mid = document.querySelector('.mid_bar')
   const btn_bot = document.querySelector('.bot_bar')
   const m_menu = document.querySelector('.nav-link')
+
   
-  console.log(m_menu)
+  const header = document.querySelector('.header-section')
+  const nav = document.querySelector('.nav-wrap')
 
-
+  
+  // btn click
   btn.addEventListener('click', function () {
     btn_top.classList.toggle("btn_open")
     btn_mid.classList.toggle("btn_open")
@@ -158,6 +161,20 @@
     m_menu.classList.toggle("btn_open")
   })
 
+  // nav fixed
+  window.onscroll = function () {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      header.classList.add('nav-fixed')
+      nav.classList.add('nav-fixed')
+      console.log('123')
+    } else {
+
+      header.classList.remove('nav-fixed')
+      nav.classList.remove('nav-fixed')
+      console.log('456')
+
+    }
+  }
 </script>
 
 </html>

@@ -7,10 +7,24 @@
 body {
   margin: 0;
   padding: 0;
+  height: 2000px;
+  background-color: rgb(182, 196, 223);
 }
 
-header {
+.header-section {
   width: 100%;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+
+  &.nav-fixed {
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.74);
+    position: fixed;
+    z-index: 120;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
+    // box-shadow: 0 0 4px 0 rgb(0 0 0 / 15%);
+  }
   .nav-wrap {
     display: flex;
     max-width: 1200px;
@@ -22,9 +36,29 @@ header {
     left: 0;
     z-index: 100;
 
+    // 寬度<1023px時，nav固定在上方
+    @media screen and (max-width: 1023px) {
+      width: 100%;
+      background-color: #fff;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 12px 20px;
+    }
+
+    &.nav-fixed {
+      // height: 70px;
+      position: static;
+      top: 0;
+    }
+
     .logo {
       width: 67px;
       height: 60px;
+      @media screen and (max-width: 1023px) {
+        width: 51px;
+        height: 35px;
+      }
       svg {
         width: 67px;
         height: 60px;
@@ -44,8 +78,7 @@ header {
           display: none;
           &.btn_open {
             display: block;
-            width: 100vw;
-            height: 100vh;
+            width: 100%;
             padding: 20px 20px 60px 20px;
             background-color: #00a728;
             position: fixed;
@@ -227,7 +260,6 @@ header {
       }
       .m-nav-btn {
         display: none;
-
         width: 25px;
         height: 20px;
         background-color: transparent;
