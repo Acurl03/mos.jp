@@ -101,14 +101,14 @@
         <div class="nav-link">
           <ul class="nav-link-items">
             <!-- mobile home:before -->
-            <li class="m-home"><a href=""></a></li>
-            <li><a href="">メニュー</a></li>
-            <li><a href="">店舗・サービス</a></li>
-            <li><a href="">キャンペーン</a></li>
-            <li><a href="">キッズ・お楽しみ</a></li>
-            <li><a href="">モスのこだわり・安全安心</a></li>
-            <li class="m-nav-none"><a href="">ネット注文</a></li>
-            <li class="m-nav-none"><a href="">モストピ</a></li>
+            <li class="nav-none m-home"><a class="m-nav-home" href=""></a></li>
+            <li><a class="m-nav-menu" href="">メニュー</a></li>
+            <li><a class="m-nav-store" href="">店舗・サービス</a></li>
+            <li><a class="m-nav-activity" href="">キャンペーン</a></li>
+            <li><a class="m-nav-kid" href="">キッズ・お楽しみ</a></li>
+            <li><a class="m-nav-quality" href="">モスのこだわり・安全安心</a></li>
+            <li class="nav-none"><a class="m-nav-order" href="">ネット注文</a></li>
+            <li class="nav-none"><a class="m-nav-mostop" href="">モストピ</a></li>
           </ul>
           <ul class="nav-link-utility">
             <li class="link-utility-login"><a href="">ログイン</a></li>
@@ -166,12 +166,11 @@
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
       header.classList.add('nav-fixed')
       nav.classList.add('nav-fixed')
-      console.log('123')
+
     } else {
 
       header.classList.remove('nav-fixed')
       nav.classList.remove('nav-fixed')
-      console.log('456')
 
     }
   }

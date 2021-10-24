@@ -131,32 +131,6 @@ body {
   }
 }
 
-.header-section .nav-wrap .nav-container .nav-link .nav-link-items .m-home,
-.header-section .nav-wrap .nav-container .nav-link .nav-link-items .m-nav-none {
-  display: none;
-}
-
-@media screen and (max-width: 1023px) {
-  .header-section .nav-wrap .nav-container .nav-link .nav-link-items .m-home,
-  .header-section .nav-wrap .nav-container .nav-link .nav-link-items .m-nav-none {
-    display: block;
-  }
-}
-
-.header-section .nav-wrap .nav-container .nav-link .nav-link-items .m-home {
-  padding: 0 0 15px 0;
-  border-bottom: 1px solid #73c787;
-}
-
-.header-section .nav-wrap .nav-container .nav-link .nav-link-items .m-home::before {
-  content: '';
-  display: block;
-  width: 30px;
-  height: 25px;
-  background: url(../img/icon/home.svg) no-repeat;
-  background-size: 30px 25px;
-}
-
 .header-section .nav-wrap .nav-container .nav-link .nav-link-items li {
   margin: 0 30px;
 }
@@ -170,6 +144,12 @@ body {
 @media screen and (max-width: 1023px) {
   .header-section .nav-wrap .nav-container .nav-link .nav-link-items li {
     margin: 0 0 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -184,11 +164,91 @@ body {
   .header-section .nav-wrap .nav-container .nav-link .nav-link-items li a {
     color: white;
     font-size: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
 .header-section .nav-wrap .nav-container .nav-link .nav-link-items li a:hover {
   opacity: 0.3;
+}
+
+.header-section .nav-wrap .nav-container .nav-link .nav-link-items .m-home,
+.header-section .nav-wrap .nav-container .nav-link .nav-link-items .nav-none {
+  display: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .header-section .nav-wrap .nav-container .nav-link .nav-link-items .m-home,
+  .header-section .nav-wrap .nav-container .nav-link .nav-link-items .nav-none {
+    display: block;
+  }
+}
+
+.header-section .nav-wrap .nav-container .nav-link .nav-link-items .m-home {
+  padding: 0 0 15px 0;
+  border-bottom: 1px solid #73c787;
+}
+
+@media screen and (max-width: 1023px) {
+  .header-section .nav-wrap .nav-container .nav-link .nav-link-items .m-nav-home::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 25px;
+    background: url(../img/icon/home.svg) no-repeat;
+    background-size: 30px 25px;
+    margin-right: 15px;
+  }
+  .header-section .nav-wrap .nav-container .nav-link .nav-link-items .m-nav-menu::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 25px;
+    background: url(../img/icon/hamburger.svg) no-repeat;
+    background-size: 30px 25px;
+    margin-right: 15px;
+  }
+  .header-section .nav-wrap .nav-container .nav-link .nav-link-items .m-nav-store::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 25px;
+    background: url(../img/icon/store.svg) no-repeat;
+    background-size: 30px 25px;
+    margin-right: 15px;
+  }
+  .header-section .nav-wrap .nav-container .nav-link .nav-link-items .m-nav-activity::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 25px;
+    background: url(../img/icon/present.svg) no-repeat;
+    background-size: 30px 25px;
+    margin-right: 15px;
+  }
+  .header-section .nav-wrap .nav-container .nav-link .nav-link-items .m-nav-kid::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 25px;
+    background: url(../img/icon/children.svg) no-repeat;
+    background-size: 30px 25px;
+    margin-right: 15px;
+  }
+  .header-section .nav-wrap .nav-container .nav-link .nav-link-items .m-nav-quality::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 25px;
+    background: url(../img/icon/omoi.svg) no-repeat;
+    background-size: 30px 25px;
+    margin-right: 15px;
+  }
 }
 
 .header-section .nav-wrap .nav-container .nav-link .nav-link-utility {
@@ -304,7 +364,44 @@ body {
 @media screen and (max-width: 1023px) {
   .header-section .nav-wrap .nav-container .nav-link .m-nav-info {
     display: block;
+    padding: 0;
+    margin: 0;
   }
+}
+
+.header-section .nav-wrap .nav-container .nav-link .m-nav-info > li {
+  padding: 0 px 7 px;
+  margin-bottom: 20 px;
+}
+
+.header-section .nav-wrap .nav-container .nav-link .m-nav-info > li > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  color: black;
+}
+
+.header-section .nav-wrap .nav-container .nav-link .m-nav-info > li > a::before {
+  content: '';
+  display: block;
+  width: 5px;
+  height: 8px;
+  margin-right: 10px;
+  background: url(../img/icon/angle_right_black.svg) 0% 0%/5px 8px no-repeat;
+}
+
+.header-section .nav-wrap .nav-container .nav-link .m-nav-info > li > a::after {
+  content: '';
+  display: inline-block;
+  vertical-align: text-top;
+  margin-left: 5px;
+  width: 12px;
+  height: 9px;
+  background: url(../img/icon/external_black.svg);
 }
 
 @media screen and (max-width: 1023px) {
