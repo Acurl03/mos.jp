@@ -14,7 +14,7 @@
   <title>MOS.JP</title>
   <link
     rel="stylesheet"
-    href="./css/index.css"
+    href="./scss/style.css"
   >
 </head>
 
@@ -155,6 +155,8 @@
   
   // btn click
   btn.addEventListener('click', function () {
+    btn.classList.toggle("btn_open")
+
     btn_top.classList.toggle("btn_open")
     btn_mid.classList.toggle("btn_open")
     btn_bot.classList.toggle("btn_open")
