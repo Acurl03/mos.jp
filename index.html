@@ -12,10 +12,16 @@
     content="width=device-width, initial-scale=1.0"
   >
   <title>MOS.JP</title>
+  <!-- swiper -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+  />
   <link
     rel="stylesheet"
     href="./scss/style.css"
   >
+
 </head>
 
 <body>
@@ -101,14 +107,38 @@
         <div class="nav-link">
           <ul class="nav-link-items">
             <!-- mobile home:before -->
-            <li class="nav-none m-home"><a class="m-nav-home" href=""></a></li>
-            <li><a class="m-nav-menu" href="">メニュー</a></li>
-            <li><a class="m-nav-store" href="">店舗・サービス</a></li>
-            <li><a class="m-nav-activity" href="">キャンペーン</a></li>
-            <li><a class="m-nav-kid" href="">キッズ・お楽しみ</a></li>
-            <li><a class="m-nav-quality" href="">モスのこだわり・安全安心</a></li>
-            <li class="nav-none"><a class="m-nav-order" href="">ネット注文</a></li>
-            <li class="nav-none"><a class="m-nav-mostop" href="">モストピ</a></li>
+            <li class="nav-none m-home"><a
+                class="m-nav-home"
+                href=""
+              ></a></li>
+            <li><a
+                class="m-nav-menu"
+                href=""
+              >メニュー</a></li>
+            <li><a
+                class="m-nav-store"
+                href=""
+              >店舗・サービス</a></li>
+            <li><a
+                class="m-nav-activity"
+                href=""
+              >キャンペーン</a></li>
+            <li><a
+                class="m-nav-kid"
+                href=""
+              >キッズ・お楽しみ</a></li>
+            <li><a
+                class="m-nav-quality"
+                href=""
+              >モスのこだわり・安全安心</a></li>
+            <li class="nav-none"><a
+                class="m-nav-order"
+                href=""
+              >ネット注文</a></li>
+            <li class="nav-none"><a
+                class="m-nav-mostop"
+                href=""
+              >モストピ</a></li>
           </ul>
           <ul class="nav-link-utility">
             <li class="link-utility-login"><a href="">ログイン</a></li>
@@ -130,7 +160,7 @@
           </ul>
         </div>
         <!-- 漢堡標按下會出現PC版的link，就是上面三區塊-->
-        <button class="m-nav-btn">
+        <button type="button" class="m-nav-btn">
           <span class="top_bar bar"></span>
           <span class="mid_bar bar"></span>
           <span class="bot_bar bar"></span>
@@ -139,20 +169,91 @@
       </div>
     </nav>
   </header>
-
+  <main>
+    <section class="banner-section">
+      <div class="banner-container">
+        <div class="banner-view-container">
+          <div class="banner-swiper-wrap">
+            <!-- Slider main container -->
+            <div class="swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="./img/banner/focacciasand_pc.jpg" alt=""></div>
+                <div class="swiper-slide"><img
+                  src="./img/banner/kana_pc.jpg"
+                  alt=""
+                ></div>
+                <div class="swiper-slide"><img
+                  src="./img/banner/mosmd_pc.jpg"
+                  alt=""
+                ></div>
+              </div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+          <div class="banner-app">
+            <img
+              class="app-img"
+              src="./img/banner/app.png"
+              alt=""
+            >
+            <p class="app-text">モスのネット注文<br>店頭お支払い中止の件</p>
+            <span class="app-tag">NEW</span>
+          </div>
+        </div>
+        <div class="banner-info">
+          <div class="banner-info-swiper">
+            123456
+          </div>
+          <a href=""></a>
+          <p></p>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="notice-container">
+        <div class="notice">
+          <div class="notice-title">
+            店舗の営業について
+          </div>
+          <p><a href="javascript:;">詳しくはこちら</a></p>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="notice-container">
+        <div class="notice bb-none">
+          <button type="button" class="notice-btn"><a href=""><span>感染症予防に関する取り組みとお知らせ</span></a></button>
+        </div>
+      </div>
+    </section>
+    <section class="section"></section>
+    <section class="section"></section>
+    <section class="section"></section>
+    <section class="section"></section>
+    <section class="section"></section>
+    <section class="section"></section>
+    <section class="section"></section>
+    <section class="section"></section>
+  </main>
 </body>
+
+<!-- swiper -->
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
 <script>
   const btn = document.querySelector('.m-nav-btn')
   const btn_top = document.querySelector('.top_bar')
   const btn_mid = document.querySelector('.mid_bar')
   const btn_bot = document.querySelector('.bot_bar')
   const m_menu = document.querySelector('.nav-link')
-
-  
   const header = document.querySelector('.header-section')
   const nav = document.querySelector('.nav-wrap')
 
-  
+
   // btn click
   btn.addEventListener('click', function () {
     btn.classList.toggle("btn_open")
@@ -168,14 +269,29 @@
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
       header.classList.add('nav-fixed')
       nav.classList.add('nav-fixed')
-
     } else {
-
       header.classList.remove('nav-fixed')
       nav.classList.remove('nav-fixed')
-
     }
   }
+
+  // swiper
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    loop: true,
+    autoplay: {
+      delay: 5000,
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+  });
+
 </script>
+
 
 </html>
