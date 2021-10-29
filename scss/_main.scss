@@ -281,6 +281,83 @@ section {
   margin: 0 0 40px;
   > li {
     margin: 0 30px;
+    &:hover .member-card-content::before {
+      opacity: 0.7;
+    }
+    &:hover .net-order-content::before {
+      opacity: 0.7;
+
+    }
+  }
+
+  .member-card-title,
+  .net-order-title {
+    display: flex;
+    align-items: center;
+    -moz-box-pack: center;
+    -webkit-box-pack: center;
+    // safari-box-align.or
+
+    justify-content: center;
+    &::before {
+      content: '';
+      display: block;
+      width: 4px;
+      height: 7px;
+      background: url(../img/icon/angle_right_green.svg) no-repeat;
+      background-size: 4px 7px;
+      margin-right: 10px;
+    }
+    img {
+      height: 30px;
+    }
+  }
+  .member-card-content {
+    display: flex;
+    flex-direction: column;
+    // orient:垂直或水平，vertical垂直
+    -webkit-box-orient: vertical;
+    // normal預設方向由左到右排列，reverse由又到左
+    -webkit-box-direction: normal;
+
+    align-items: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 384px;
+      height: 125px;
+      background: url(../img/member/member_card.png) no-repeat;
+      background-size: 384px 125px;
+      margin-bottom: 20px;
+      opacity: 1;
+      transform: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+    }
+  }
+  .net-order-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    &::before {
+      content: '';
+      display: block;
+      width: 335px;
+      height: 125px;
+      background: url(../img/member/member_net_order.png) no-repeat;
+      background-size: 335px 125px;
+      margin-bottom: 20px;
+      opacity: 1;
+      transform: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+    }
   }
 }
 .member-btn {
