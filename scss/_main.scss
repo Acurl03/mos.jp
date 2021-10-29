@@ -1,4 +1,5 @@
 @import 'base';
+@import 'variable';
 
 .banner-section {
   display: block;
@@ -13,12 +14,11 @@
 }
 .banner-view-container {
   position: relative;
-  width: calc(100vw - 40px);
+  width: calc(100% - 40px);
   height: calc(100vh - 40px);
   // overflow: hidden;
   margin: 20px;
 }
-
 // swiper
 .banner-swiper-wrap {
   width: 100%;
@@ -54,7 +54,6 @@
   bottom: 45px;
   z-index: 2;
 }
-
 .banner-info {
   position: absolute;
   left: 60px;
@@ -64,11 +63,9 @@
 }
 
 /* ////////////////////
-
 notice
-
 //////////////////// */
-.section {
+section {
   display: block;
 }
 .notice-container {
@@ -79,15 +76,12 @@ notice
   margin: 0 auto;
   padding: 0 0 35px;
   max-width: 1000px;
-
   &.bb-none {
     border-bottom: none;
   }
-
   .notice-title {
-    color: red;
+    color: $sub-color;
   }
-
   p {
     a {
       display: flex;
@@ -103,7 +97,6 @@ notice
       }
     }
   }
-
   .notice-btn {
     display: inline-block;
     width: 1000px;
@@ -120,6 +113,272 @@ notice
       font-weight: 400;
       line-height: 1.2;
       color: white;
+    }
+  }
+}
+/* ////new topic 
+& shop/service */
+.section {
+  margin: 80px 0;
+}
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section-title {
+  margin-bottom: 40px;
+  h2 {
+    display: flex;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 0 0 25px;
+    margin: 0 0 25px;
+    position: relative;
+    &::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: $primary-color;
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 20px);
+    }
+    &::after {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: $sub-color;
+      position: absolute;
+      bottom: 0;
+      right: calc(50% - 20px);
+    }
+    img {
+      height: 36px;
+    }
+  }
+  p {
+    font-size: 16px;
+    color: #212529;
+    text-align: center;
+  }
+}
+
+/* swiper */
+/* service-list */
+.service-list {
+  display: flex;
+  margin: 0 0 40px;
+  > li {
+    width: calc(100% / 4 - 35px * 2);
+    margin: 0 35px;
+  }
+}
+/* btns */
+.section-btn {
+  display: flex;
+  justify-content: center;
+  > .btn-sm {
+    width: 190px;
+    margin: 0 10px;
+
+    a {
+      // display: flex;
+      display: block;
+      background-color: $primary-color;
+      color: #fff;
+      font-size: 16px;
+      padding: 7px 0;
+      border-radius: 30px;
+      border: 1px solid $primary-color;
+      text-align: center;
+      position: relative;
+      transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+      &:hover {
+        background-color: #fff;
+        color: $primary-color;
+        &::before {
+          background: url(../img/icon/angle_right_green.svg) no-repeat;
+        }
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        width: 5px;
+        height: 8px;
+        background: url(../img/icon/angle_right_white.svg) no-repeat;
+        background-size: 5px 8px;
+        position: absolute;
+        top: calc(50% - 4px);
+        left: 12px;
+      }
+    }
+  }
+}
+
+/* attest area */
+
+.attest-container {
+  display: flex;
+  justify-content: center;
+  -webkit-box-pack: center;
+  background: #f5f5f5;
+  > ul {
+    display: flex;
+  }
+}
+
+/* delicious */
+
+.tasty-list {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin: 0 auto 40px;
+  > li {
+    width: calc(100% / 4 - 35px * 2);
+    margin: 0 35px;
+  }
+}
+
+/* member */
+.member-container {
+  background: url(../img/member/member_area_bg.png) no-repeat;
+  background-size: cover;
+  padding: 70px 0 40px;
+  // overflow-x: hidden;
+}
+.member-content {
+  margin-bottom: 70px;
+}
+.member-title {
+  width: 524px;
+  height: 83px;
+  background: url(../img/member/member_heading.png) no-repeat;
+  background-size: 524px 83px;
+  margin: 0 auto 45px;
+  position: relative;
+  span {
+    width: 100%;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    // 往左本身的一半，不用計算本身的長度
+    transform: translateX(-50%);
+  }
+}
+.member-list {
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  justify-content: center;
+  margin: 0 0 40px;
+  > li {
+    margin: 0 30px;
+  }
+}
+.member-btn {
+  display: flex;
+  justify-content: center;
+  .btn-lg {
+    width: 240px;
+    margin: 0 15px;
+
+    a {
+      // display: flex;
+      display: block;
+      background-color: $primary-color;
+      color: #fff;
+      font-size: 18px;
+      padding: 15px 0;
+      border-radius: 50px;
+      border: 1px solid $primary-color;
+      text-align: center;
+      position: relative;
+      transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+      &:hover {
+        background-color: #fff;
+        color: $primary-color;
+        &::before {
+          background: url(../img/icon/angle_right_green.svg) no-repeat;
+        }
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        width: 5px;
+        height: 8px;
+        background: url(../img/icon/angle_right_white.svg) no-repeat;
+        background-size: 5px 8px;
+        position: absolute;
+        top: calc(50% - 4px);
+        left: 20px;
+      }
+    }
+  }
+}
+
+/* social media*/
+
+.social-list {
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  justify-content: center;
+  > li {
+    margin: 0 20px;
+  }
+
+  .facebook {
+    width: 16px;
+    height: 30px;
+  }
+  .twitter {
+    width: 34px;
+    height: 28px;
+  }
+  .instagram {
+    width: 30px;
+    height: 30px;
+  }
+
+  .youtube {
+    width: 36px;
+    height: 26px;
+  }
+}
+
+/* feat-list */
+
+.feat-section {
+  background-color: $primary-color;
+  padding: 35px 0;
+  @media screen and (max-width: 768px) {
+    padding: 25px 0;
+  }
+}
+.feat-list {
+  display: flex;
+  -moz-box-pack: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  > li {
+    width: 200px;
+    > a {
+      display: block;
+      max-width: 160px;
+
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
     }
   }
 }

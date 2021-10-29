@@ -219,7 +219,7 @@
         </div>
       </div>
     </section>
-    <section class="section">
+    <section>
       <div class="notice-container">
         <div class="notice">
           <div class="notice-title">
@@ -229,7 +229,7 @@
         </div>
       </div>
     </section>
-    <section class="section">
+    <section>
       <div class="notice-container">
         <div class="notice bb-none">
           <button
@@ -239,7 +239,27 @@
         </div>
       </div>
     </section>
-    <!-- news -->
+    <!-- new topic -->
+    <section class="section">
+      <div class="section-container">
+        <div class="section-title">
+          <h2><img
+              src="./img/services/topics.svg"
+              alt="topics"
+            ></h2>
+          <p>新商品／最新情報をご紹介</p>
+        </div>
+        <div class="section-swiper">
+
+        </div>
+        <ul class="section-btn">
+          <li class="btn-sm"><a href="javascript:;">メニュー</a></li>
+          <li class="btn-sm"><a href="javascript:;">キャンペーン</a></li>
+        </ul>
+      </div>
+
+    </section>
+    <!-- shop/service -->
     <section class="section">
       <div class="section-container">
         <div class="section-title">
@@ -249,24 +269,7 @@
             ></h2>
           <p>店舗でゆっくり、ネットで待たずに、会員でおトク、モスの便利なサービスです。</p>
         </div>
-        <div class="section-swiper">
-
-        </div>
-        <div class="section-btn">
-          <button></button>
-          <button></button>
-        </div>
-      </div>
-
-    </section>
-    <!-- shop/service -->
-    <section class="section">
-      <div class="section-container">
-        <div class="section-title">
-          <h2></h2>
-          <p></p>
-        </div>
-        <ul>
+        <ul class="service-list">
           <li>
             <a href="javascript:;">
               <div class="card">
@@ -313,16 +316,15 @@
             </a>
           </li>
         </ul>
-        <div class="service-btn">
-          <button type="button">
-            <p>一覧</p>
-          </button>
-        </div>
+        <ul class="section-btn">
+          <li class="btn-sm"><a href="javascript:;">一覧</a></li>
+
+        </ul>
       </div>
     </section>
 
     <section class="section">
-      <div class="section-container">
+      <div class="attest-container">
         <ul>
           <li>
             <a href="javascript:;"><img
@@ -357,7 +359,7 @@
             ></h2>
           <p>モスのおいしさについてさまざまな取り組みやこだわりをご紹介します。</p>
         </div>
-        <ul>
+        <ul class="tasty-list">
           <li>
             <a href="javascript:;">
               <div class="card">
@@ -399,9 +401,9 @@
     </section>
     <section class="section">
       <div class="member-container">
-        <div>
-          <h2><span>モスWEB会員でおトクに便利に</span></h2>
-          <ul>
+        <div class="member-content">
+          <h2 class="member-title"><span>モスWEB会員でおトクに便利に</span></h2>
+          <ul class="member-list">
             <li><a href="javascript:;">
                 <p><img
                     src="./img/member/mos_card.svg"
@@ -418,8 +420,8 @@
               </a></li>
           </ul>
           <ul class="member-btn">
-            <li><a href="javascipt:;">会員登録</a></li>
-            <li><a href="javascipt:;">会員の方はこちら</a></li>
+            <li class="btn-lg"><a href="javascipt:;">会員登録</a></li>
+            <li class="btn-lg"><a href="javascipt:;">会員の方はこちら</a></li>
           </ul>
         </div>
         <hr class="member-hr">
@@ -430,9 +432,27 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
-              <div class="swiper-slide"><a href="javascript:;"><div class="slide-img-wrap"><img src="./img/member/th_mem_cardpre.png" alt=""></div><p>MOSポイント プレゼントキャンペーンを実施中！感謝の気持ちを込めて、皆さまに当選のチャンス。</p></a></div>
-              <div class="swiper-slide"><a href="javascript:;"><div class="slide-img-wrap"><img src="./img/member/th_mem_usage.png" alt=""></div><p>【モスカードの特典フル活用術】モスカードとネット注文の特典を知っているだけでこんなにお得！</p></a></div>
-              <div class="swiper-slide"><a href="javascript:;"><div class="slide-img-wrap"><img src="./img/member/th_mem_rank.png" alt=""></div><p>モスカードでネット決済すると、さらにお得！</p></a></div>
+              <div class="swiper-slide"><a href="javascript:;">
+                  <div class="slide-img-wrap"><img
+                      src="./img/member/th_mem_cardpre.png"
+                      alt=""
+                    ></div>
+                  <p>MOSポイント プレゼントキャンペーンを実施中！感謝の気持ちを込めて、皆さまに当選のチャンス。</p>
+                </a></div>
+              <div class="swiper-slide"><a href="javascript:;">
+                  <div class="slide-img-wrap"><img
+                      src="./img/member/th_mem_usage.png"
+                      alt=""
+                    ></div>
+                  <p>【モスカードの特典フル活用術】モスカードとネット注文の特典を知っているだけでこんなにお得！</p>
+                </a></div>
+              <div class="swiper-slide"><a href="javascript:;">
+                  <div class="slide-img-wrap"><img
+                      src="./img/member/th_mem_rank.png"
+                      alt=""
+                    ></div>
+                  <p>モスカードでネット決済すると、さらにお得！</p>
+                </a></div>
             </div>
             <!-- If we need navigation buttons -->
             <div class="swiper-button-prev"></div>
@@ -442,30 +462,55 @@
       </div>
     </section>
     <section class="section">
-      <div class="social-container">
-        <ul>
-          <li><a href="javascript:;"><img src="./img/social/facebook.svg" alt="facebook"></a></li>
-          <li><a href="javascript:;"><img src="./img/social/twitter.svg" alt="twitter"></a></li>
-          <li><a href="javascript:;"><img src="./img/social/instagram.svg" alt="instagram"></a></li>
-          <li><a href="javascript:;"><img src="./img/social/youtube.svg" alt="youtube"></a></li>
-        </ul>
-      </div>
+      <ul class="social-list">
+        <li><a href="javascript:;"><img
+              class="facebook"
+              src="./img/social/facebook.svg"
+              alt="facebook"
+            ></a></li>
+        <li><a href="javascript:;"><img
+              class="twitter"
+              src="./img/social/twitter.svg"
+              alt="twitter"
+            ></a></li>
+        <li><a href="javascript:;"><img
+              class="instagram"
+              src="./img/social/instagram.svg"
+              alt="instagram"
+            ></a></li>
+        <li><a href="javascript:;"><img
+              class="youtube"
+              src="./img/social/youtube.svg"
+              alt="youtube"
+            ></a></li>
+      </ul>
+
     </section>
-    <section class="section">
-      <div class="container">
-        <ul>
-          <li><a href="javascript:;"><img src="./img/other/ft_mosdo.png" alt="mosdo"></a></li>
-          <li><a href="javascript:;"><img src="./img/other/ft_vegetables.png" alt="vegetables"></a></li>
+    <section class="feat-section">
+        <ul class="feat-list">
+          <li><a href="javascript:;"><img
+                src="./img/other/ft_mosdo.png"
+                alt="mosdo"
+              ></a></li>
+          <li><a href="javascript:;"><img
+                src="./img/other/ft_vegetables.png"
+                alt="vegetables"
+              ></a></li>
         </ul>
-      </div>
     </section>
   </main>
   <footer>
     <div class="footer-container">
       <div class="footer-grid">
         <ul>
-          <li><a href="javascript:;"><span><img src="./img/other/ft_staff.png" alt="staff"><span></span>スタッフ募集</span></a></li>
-          <li><a href="javascript:;"><span><img src="./img/other/ft_shop.png" alt="shop"></span><span>加盟・独立・物件募集</span></a></li>
+          <li><a href="javascript:;"><span><img
+                  src="./img/other/ft_staff.png"
+                  alt="staff"
+                ><span></span>スタッフ募集</span></a></li>
+          <li><a href="javascript:;"><span><img
+                  src="./img/other/ft_shop.png"
+                  alt="shop"
+                ></span><span>加盟・独立・物件募集</span></a></li>
         </ul>
         <ul>
           <li><a href="javascript:;">公式サイト</a></li>
