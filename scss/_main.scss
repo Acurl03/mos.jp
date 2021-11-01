@@ -172,7 +172,8 @@ section {
 /* swiper */
 
 /* service-list */
-.service-list {
+.service-list,
+.tasty-list {
   max-width: 1200px;
   margin: 0 auto 40px;
   display: flex;
@@ -191,10 +192,12 @@ section {
       margin: 0 8px 20px;
     }
     a {
-      width: 100%;
-      border: 1px solid #e6e6e6;
-      border-radius: 10px;
-      padding: 20px;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        border: 1px solid #e6e6e6;
+        border-radius: 10px;
+        padding: 20px;
+      }
     }
   }
 }
@@ -205,6 +208,7 @@ section {
   img {
     margin-bottom: 20px;
   }
+  // shop/service
   .card-img-search {
     width: 106px;
   }
@@ -216,6 +220,19 @@ section {
   }
   .card-img-card {
     width: 90px;
+  }
+  // tasty
+  .card-img-omoi {
+    width: 135px;
+  }
+  .card-img-quality {
+    width: 81px;
+  }
+  .card-img-mostopi {
+    width: 96px;
+  }
+  .card-img-omoi-logo {
+    width: 56px;
   }
   @media screen and (max-width: 768px) {
     .card-img-search {
@@ -229,6 +246,18 @@ section {
     }
     .card-img-card {
       width: 61px;
+    }
+    .card-img-omoi {
+      width: 75px;
+    }
+    .card-img-quality {
+      width: 51px;
+    }
+    .card-img-mostopi {
+      width: 58px;
+    }
+    .card-img-omoi-logo {
+      width: 38px;
     }
   }
   .card-title {
@@ -301,19 +330,6 @@ section {
   background: #f5f5f5;
   > ul {
     display: flex;
-  }
-}
-
-/* delicious */
-
-.tasty-list {
-  display: flex;
-  -webkit-box-pack: center;
-  justify-content: center;
-  margin: 0 auto 40px;
-  > li {
-    width: calc(100% / 4 - 35px * 2);
-    margin: 0 35px;
   }
 }
 

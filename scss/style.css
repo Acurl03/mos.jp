@@ -866,7 +866,8 @@ section {
 
 /* swiper */
 /* service-list */
-.service-list {
+.service-list,
+.tasty-list {
   max-width: 1200px;
   margin: 0 auto 40px;
   display: -webkit-box;
@@ -878,14 +879,16 @@ section {
 }
 
 @media screen and (max-width: 768px) {
-  .service-list {
+  .service-list,
+  .tasty-list {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin: 0 -8px 10px;
   }
 }
 
-.service-list > li {
+.service-list > li,
+.tasty-list > li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -897,17 +900,21 @@ section {
 }
 
 @media screen and (max-width: 768px) {
-  .service-list > li {
+  .service-list > li,
+  .tasty-list > li {
     width: calc(100% / 2 - 8px * 2);
     margin: 0 8px 20px;
   }
 }
 
-.service-list > li a {
-  width: 100%;
-  border: 1px solid #e6e6e6;
-  border-radius: 10px;
-  padding: 20px;
+@media screen and (max-width: 768px) {
+  .service-list > li a,
+  .tasty-list > li a {
+    width: 100%;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    padding: 20px;
+  }
 }
 
 .card {
@@ -943,6 +950,22 @@ section {
   width: 90px;
 }
 
+.card .card-img-omoi {
+  width: 135px;
+}
+
+.card .card-img-quality {
+  width: 81px;
+}
+
+.card .card-img-mostopi {
+  width: 96px;
+}
+
+.card .card-img-omoi-logo {
+  width: 56px;
+}
+
 @media screen and (max-width: 768px) {
   .card .card-img-search {
     width: 71px;
@@ -955,6 +978,18 @@ section {
   }
   .card .card-img-card {
     width: 61px;
+  }
+  .card .card-img-omoi {
+    width: 75px;
+  }
+  .card .card-img-quality {
+    width: 51px;
+  }
+  .card .card-img-mostopi {
+    width: 58px;
+  }
+  .card .card-img-omoi-logo {
+    width: 38px;
   }
 }
 
@@ -1051,22 +1086,6 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-/* delicious */
-.tasty-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  margin: 0 auto 40px;
-}
-
-.tasty-list > li {
-  width: calc(100% / 4 - 35px * 2);
-  margin: 0 35px;
 }
 
 /* member */
