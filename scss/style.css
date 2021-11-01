@@ -807,6 +807,12 @@ section {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 768px) {
+  .section-container {
+    margin: 0 20px;
+  }
+}
+
 .section-title {
   margin-bottom: 40px;
 }
@@ -861,15 +867,117 @@ section {
 /* swiper */
 /* service-list */
 .service-list {
+  max-width: 1200px;
+  margin: 0 auto 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 0 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .service-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 -8px 10px;
+  }
 }
 
 .service-list > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: calc(100% / 4 - 35px * 2);
   margin: 0 35px;
+}
+
+@media screen and (max-width: 768px) {
+  .service-list > li {
+    width: calc(100% / 2 - 8px * 2);
+    margin: 0 8px 20px;
+  }
+}
+
+.service-list > li a {
+  width: 100%;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card img {
+  margin-bottom: 20px;
+}
+
+.card .card-img-search {
+  width: 106px;
+}
+
+.card .card-img-order {
+  width: 106px;
+}
+
+.card .card-img-service {
+  width: 80px;
+}
+
+.card .card-img-card {
+  width: 90px;
+}
+
+@media screen and (max-width: 768px) {
+  .card .card-img-search {
+    width: 71px;
+  }
+  .card .card-img-order {
+    width: 69px;
+  }
+  .card .card-img-service {
+    width: 61px;
+  }
+  .card .card-img-card {
+    width: 61px;
+  }
+}
+
+.card .card-title {
+  font-size: 18px;
+  color: #00A728;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .card .card-title {
+    font-size: 16px;
+  }
+}
+
+.card .card-text {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .card .card-text {
+    font-size: 13px;
+  }
 }
 
 /* btns */
@@ -883,7 +991,7 @@ section {
 }
 
 .section-btn > .btn-sm {
-  width: 190px;
+  width: 120px;
   margin: 0 10px;
 }
 
@@ -899,6 +1007,12 @@ section {
   position: relative;
   -webkit-transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
   transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+@media screen and (max-width: 768px) {
+  .section-btn > .btn-sm a {
+    font-size: 14px;
+  }
 }
 
 .section-btn > .btn-sm a:hover {

@@ -124,6 +124,9 @@ section {
 .section-container {
   max-width: 1200px;
   margin: 0 auto;
+  @media screen and (max-width: 768px) {
+    margin: 0 20px;
+  }
 }
 .section-title {
   margin-bottom: 40px;
@@ -167,13 +170,80 @@ section {
 }
 
 /* swiper */
+
 /* service-list */
 .service-list {
+  max-width: 1200px;
+  margin: 0 auto 40px;
   display: flex;
-  margin: 0 0 40px;
+  justify-content: center;
+  @media screen and (max-width: 768px) {
+    flex-wrap: wrap;
+    margin: 0 -8px 10px;
+  }
   > li {
+    display: flex;
+    justify-content: center;
     width: calc(100% / 4 - 35px * 2);
     margin: 0 35px;
+    @media screen and (max-width: 768px) {
+      width: calc(100% / 2 - 8px * 2);
+      margin: 0 8px 20px;
+    }
+    a {
+      width: 100%;
+      border: 1px solid #e6e6e6;
+      border-radius: 10px;
+      padding: 20px;
+    }
+  }
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    margin-bottom: 20px;
+  }
+  .card-img-search {
+    width: 106px;
+  }
+  .card-img-order {
+    width: 106px;
+  }
+  .card-img-service {
+    width: 80px;
+  }
+  .card-img-card {
+    width: 90px;
+  }
+  @media screen and (max-width: 768px) {
+    .card-img-search {
+      width: 71px;
+    }
+    .card-img-order {
+      width: 69px;
+    }
+    .card-img-service {
+      width: 61px;
+    }
+    .card-img-card {
+      width: 61px;
+    }
+  }
+  .card-title {
+    font-size: 18px;
+    color: $primary-color;
+    margin-bottom: 15px;
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+  .card-text {
+    font-size: 14px;
+    @media screen and (max-width: 768px) {
+      font-size: 13px;
+    }
   }
 }
 /* btns */
@@ -181,7 +251,7 @@ section {
   display: flex;
   justify-content: center;
   > .btn-sm {
-    width: 190px;
+    width: 120px;
     margin: 0 10px;
 
     a {
@@ -196,6 +266,9 @@ section {
       text-align: center;
       position: relative;
       transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+      }
       &:hover {
         background-color: #fff;
         color: $primary-color;
