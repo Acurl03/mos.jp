@@ -250,9 +250,15 @@ section {
   background-size: cover;
   padding: 70px 0 40px;
   // overflow-x: hidden;
+  @media screen and (max-width: 768px) {
+    padding: 45px 0;
+  }
 }
 .member-content {
   margin-bottom: 70px;
+  @media screen and (max-width: 768px) {
+    margin: 0 20px 45px;
+  }
 }
 .member-title {
   width: 524px;
@@ -261,6 +267,22 @@ section {
   background-size: 524px 83px;
   margin: 0 auto 45px;
   position: relative;
+  @media screen and (max-width: 768px) {
+    width: auto;
+    height: auto;
+    background: none;
+    text-align: center;
+    line-height: 1;
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      // center center是要置中，否則會靠左，用position沒用
+      background: url(../img/member/member_heading_border.svg) center center
+        no-repeat;
+      height: 3px;
+    }
+  }
   span {
     width: 100%;
     font-size: 20px;
@@ -271,6 +293,15 @@ section {
     left: 50%;
     // 往左本身的一半，不用計算本身的長度
     transform: translateX(-50%);
+    @media screen and (max-width: 768px) {
+      display: block;
+      margin: 16px 0;
+      font-size: 16px;
+      position: static;
+      left: auto;
+      bottom: auto;
+      transform: none;
+    }
   }
 }
 .member-list {
@@ -279,6 +310,10 @@ section {
   -moz-box-pack: center;
   justify-content: center;
   margin: 0 0 40px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    margin: 0;
+  }
   > li {
     margin: 0 30px;
     &:hover .member-card-content::before {
@@ -330,13 +365,22 @@ section {
     &::before {
       content: '';
       display: block;
-      width: 384px;
+      width: 348px;
       height: 125px;
       background: url(../img/member/member_card.png) no-repeat;
-      background-size: 384px 125px;
+      background-size: 348px 125px;
       margin-bottom: 20px;
       opacity: 1;
       transform: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+      @media screen and (max-width: 768px) {
+        width: 270px;
+        height: 97px;
+        background-size: 270px 97px;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 15px;
+      margin-bottom: 35px;
     }
   }
   .net-order-content {
@@ -356,15 +400,43 @@ section {
       margin-bottom: 20px;
       opacity: 1;
       transform: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+      @media screen and (max-width: 768px) {
+        width: 256px;
+        height: 111px;
+        background-size: 256px 111px;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 15px;
+      margin-bottom: 35px;
     }
   }
 }
 .member-btn {
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    -moz-box-align: center;
+    -webkit-box-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+  }
   .btn-lg {
     width: 240px;
     margin: 0 15px;
+    @media screen and (max-width: 768px) {
+      width: 280px;
+      margin: 0 0 25px;
+    }
+
+    &:last-child a {
+      background-color: inherit;
+      border: 2px solid #fff;
+    }
 
     a {
       // display: flex;
@@ -378,6 +450,10 @@ section {
       text-align: center;
       position: relative;
       transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+      @media screen and (max-width: 768px) {
+        font-size: 16px;
+      }
+
       &:hover {
         background-color: #fff;
         color: $primary-color;
