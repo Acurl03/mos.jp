@@ -117,6 +117,9 @@ section {
 & shop/service */
 .section {
   margin: 80px 0;
+  @media screen and (max-width: 768px) {
+    margin: 55px 0 50px;
+  }
 }
 .section-container {
   max-width: 1200px;
@@ -283,7 +286,6 @@ section {
     }
     &:hover .net-order-content::before {
       opacity: 0.7;
-
     }
   }
 
@@ -320,7 +322,7 @@ section {
     align-items: center;
     -webkit-box-pack: center;
     -moz-box-pack: center;
-    
+
     justify-content: center;
     text-align: center;
     color: #fff;
@@ -422,10 +424,27 @@ section {
     width: 30px;
     height: 30px;
   }
-
   .youtube {
     width: 36px;
     height: 26px;
+  }
+  @media screen and (max-width: 768px) {
+    .facebook {
+      width: calc(23px / 2);
+      height: calc(45px / 2);
+    }
+    .twitter {
+      width: calc(52px / 2);
+      height: calc(42px / 2);
+    }
+    .instagram {
+      width: calc(45px / 2);
+      height: calc(45px / 2);
+    }
+    .youtube {
+      width: calc(54px / 2);
+      height: calc(38px / 2);
+    }
   }
 }
 
@@ -435,19 +454,28 @@ section {
   background-color: $primary-color;
   padding: 35px 0;
   @media screen and (max-width: 768px) {
-    padding: 25px 0;
+    padding: 25px 10px;
   }
 }
 .feat-list {
   display: flex;
+  align-items: center;
   -moz-box-pack: center;
   -webkit-box-pack: center;
   justify-content: center;
   > li {
     width: 200px;
+    @media screen and (max-width: 768px) {
+      width: 50%;
+      padding: 0 10px;
+    }
     > a {
-      display: block;
+      display: flex;
+      align-items: center;
       max-width: 160px;
+      @media screen and (max-width: 768px) {
+        max-width: 100%;
+      }
 
       img {
         width: 100%;
