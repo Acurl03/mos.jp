@@ -218,30 +218,42 @@
         </div>
         <div class="banner-info">
           <div class="banner-info-container">
-            
+
             <div class="banner-info-swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <a class="swiper-slide-link" href="javascript:;">
+                  <a
+                    class="swiper-slide-link"
+                    href="javascript:;"
+                  >
                     <span class="info-date">2021/10/15</span>
                     <span class="info-text">店舗における新型コロナウイルス感染者の発生について（モスバーガー近鉄あべの橋店）</span>
                   </a>
                 </div>
                 <div class="swiper-slide">
-                  <a class="swiper-slide-link" href="javascript:;">
+                  <a
+                    class="swiper-slide-link"
+                    href="javascript:;"
+                  >
                     <span class="info-date">2021/10/15</span>
                     <span class="info-text">店舗における新型コロナウイルス感染者の発生について（モスバーガー川崎東口店）</span>
                   </a>
                 </div>
                 <div class="swiper-slide">
-                  <a class="swiper-slide-link" href="javascript:;">
+                  <a
+                    class="swiper-slide-link"
+                    href="javascript:;"
+                  >
                     <span class="info-date">2021/10/15</span>
                     <span class="info-text">店舗における新型コロナウイルス感染者の発生について（モスバーガー近鉄あべの橋店）</span>
                   </a>
                 </div>
               </div>
             </div>
-            <a class="info-all" href="javascript:;"><span>一覧</span></a>
+            <a
+              class="info-all"
+              href="javascript:;"
+            ><span>一覧</span></a>
           </div>
           <p></p>
         </div>
@@ -272,7 +284,8 @@
     <section class="section">
       <div class="section-container">
         <div class="section-title">
-          <h2><img class="topics-title"
+          <h2><img
+              class="topics-title"
               src="./img/services/topics.svg"
               alt="topics"
             ></h2>
@@ -292,7 +305,8 @@
     <section class="section">
       <div class="section-container">
         <div class="section-title">
-          <h2><img class="service-title"
+          <h2><img
+              class="service-title"
               src="./img/services/shop_services.svg"
               alt="shop/services"
             ></h2>
@@ -358,35 +372,53 @@
 
     <section class="section">
       <div class="attest-container">
-        <ul>
-          <li>
-            <a href="javascript:;"><img
-                src="./img/other/banner_beyond.png"
-                alt="beyond2020"
-              ></a>
-            <div>
-              <p>モスバーガーはbeyond 2020 プログラムに認証されています。</p>
-              <p></p>
+        <div class="attest-swiper">
+          <!-- Additional required wrapper -->
+          <div class="attest-swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <a
+                class="slide-title"
+                href="javascript:;"
+              ><img
+                  src="./img/other/banner_beyond.png"
+                  alt="beyond2020"
+                >
+              </a>
+              <div class="slide-text">
+                <p>モスバーガーはbeyond 2020 プログラムに認証されています。</p>
+                <p>><a href="javascript:;">詳細はこちら</a></p>
+
+              </div>
             </div>
-          </li>
-          <li>
-            <a href="javascript:;"><img
-                src="./img/other/banner_inbound.png"
-                alt="mos"
-              ></a>
-            <div>
-              <p>What is MOSBURGER for tourist</p>
-              <p>><a href="javascript:;">詳細はこちら</a></p>
+
+            <div class="swiper-slide">
+              <a
+                class="slide-title"
+                href="javascript:;"
+              ><img
+                  src="./img/other/banner_inbound.png"
+                  alt="mos"
+                ></a>
+              <div class="slide-text">
+                <p>What is MOSBURGER for tourist</p>
+                <p>><a href="javascript:;">詳細はこちら</a></p>
+              </div>
             </div>
-          </li>
-        </ul>
-        <!-- mobile會出現swiper的按鈕 -->
+          </div>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+
+      </div>
       </div>
     </section>
     <section class="section">
       <div class="section-container">
         <div class="section-title">
-          <h2><img class="tasty-title"
+          <h2><img
+              class="tasty-title"
               src="./img/other/for_deliciousness.svg"
               alt=""
             ></h2>
@@ -661,12 +693,12 @@
       delay: 6000,
     },
     spaceBetween: 20,
-    
+
     effect: 'fade',
     fadeEffect: {
       crossFade: true
     },
-    
+
 
     // Navigation arrows
     navigation: {
@@ -686,22 +718,23 @@
     },
     slidesPerView: 1,
 
-    // effect: 'coverflow',
-    // coverflowEffect: {
-    //   rotate: 100,
-    //   slideShadows: false,
-    // },
-    // spaceBetween: 20,
-    // direction: horizontal,
-
-    // Navigation arrows
-    // navigation: {
-    //   nextEl: '.swiper-button-next',
-    //   prevEl: '.swiper-button-prev',
-    // }
 
   });
+  // attest-swiper
+  const attest_swiper = new Swiper('.attest-swiper', {
 
+    breakpoints: {
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+
+  });
 
 </script>
 

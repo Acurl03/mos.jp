@@ -1252,6 +1252,11 @@ section {
   }
 }
 
+.service-list > li:hover .card img,
+.tasty-list > li:hover .card img {
+  opacity: 0.7;
+}
+
 @media screen and (max-width: 768px) {
   .service-list > li a,
   .tasty-list > li a {
@@ -1277,6 +1282,8 @@ section {
 
 .card img {
   margin-bottom: 20px;
+  -webkit-transition: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 .card .card-img-search {
@@ -1427,14 +1434,78 @@ section {
   background: #f5f5f5;
 }
 
-.attest-container > ul {
+.attest-swiper {
+  max-width: 798px;
+  width: calc(100% - 54px * 2);
+  margin: 60px 0 0;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .attest-swiper {
+    margin: 40px 0 18px 10px;
+    width: 100%;
+  }
+}
+
+.attest-swiper .attest-swiper-wrapper {
+  width: 100%;
+  margin: 0 0 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.attest-container > ul li a img {
-  width: 100px;
+.attest-swiper .attest-swiper-wrapper .swiper-slide {
+  width: calc(50% - 15px * 2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (min-width: 706px) {
+  .attest-swiper .attest-swiper-wrapper .swiper-slide:last-child {
+    border-left: 1px solid #dddddd;
+    padding: 0 0 0 40px;
+    margin: 0 0 0 40px;
+  }
+}
+
+@media screen and (max-width: 705px) {
+  .attest-swiper .attest-swiper-wrapper .swiper-slide {
+    width: 50%;
+  }
+}
+
+.attest-swiper .attest-swiper-wrapper .swiper-slide .slide-title img {
+  width: 154px;
+  border-radius: 8px;
+  -webkit-transition: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+  margin-right: 10px;
+}
+
+.attest-swiper .attest-swiper-wrapper .swiper-slide .slide-text {
+  width: 100%;
+  font-size: 14px;
+}
+
+.attest-swiper .attest-swiper-wrapper .swiper-slide .slide-text p {
+  margin-bottom: 1rem;
+}
+
+.attest-swiper .attest-swiper-wrapper .swiper-slide .slide-text p a {
+  margin-left: 5px;
+}
+
+.attest-swiper .swiper-button-next {
+  border: 1px solid #9c5346;
+  width: 50px;
+  height: 50px;
+  top: 90%;
 }
 
 /* member */
