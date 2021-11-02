@@ -176,45 +176,74 @@
     <section class="banner-section">
       <div class="banner-container">
         <div class="banner-view-container">
-          <div class="banner-swiper-wrap">
-            <!-- Slider main container -->
-            <div class="swiper">
-              <!-- Additional required wrapper -->
-              <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide"><img
-                    src="./img/banner/focacciasand_pc.jpg"
-                    alt=""
-                  ></div>
-                <div class="swiper-slide"><img
-                    src="./img/banner/kana_pc.jpg"
-                    alt=""
-                  ></div>
-                <div class="swiper-slide"><img
-                    src="./img/banner/mosmd_pc.jpg"
-                    alt=""
-                  ></div>
-              </div>
-              <!-- If we need navigation buttons -->
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
+
+          <!-- Slider main container -->
+          <div class="banner-view-swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><img
+                  src="./img/banner/focacciasand_pc.jpg"
+                  alt=""
+                ></div>
+              <div class="swiper-slide"><img
+                  src="./img/banner/kana_pc.jpg"
+                  alt=""
+                ></div>
+              <div class="swiper-slide"><img
+                  src="./img/banner/mosmd_pc.jpg"
+                  alt=""
+                ></div>
             </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
+
           <div class="banner-app">
-            <img
-              class="app-img"
-              src="./img/banner/app.png"
-              alt=""
+            <a
+              class="banner-app-link"
+              href="javascript:;"
             >
-            <p class="app-text">モスのネット注文<br>店頭お支払い中止の件</p>
-            <span class="app-tag">NEW</span>
+              <img
+                class="app-img"
+                src="./img/banner/app.png"
+                alt="app's image"
+              >
+              <p class="app-text">モスのネット注文<br>店頭お支払い中止の件</p>
+              <span class="app-tag">NEW</span>
+            </a>
+
           </div>
         </div>
         <div class="banner-info">
-          <div class="banner-info-swiper">
-            123456
+          <div class="banner-info-container">
+            
+            <div class="banner-info-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a class="swiper-slide-link" href="javascript:;">
+                    <span class="info-date">2021/10/15</span>
+                    <span class="info-text">店舗における新型コロナウイルス感染者の発生について（モスバーガー近鉄あべの橋店）</span>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="swiper-slide-link" href="javascript:;">
+                    <span class="info-date">2021/10/15</span>
+                    <span class="info-text">店舗における新型コロナウイルス感染者の発生について（モスバーガー川崎東口店）</span>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="swiper-slide-link" href="javascript:;">
+                    <span class="info-date">2021/10/15</span>
+                    <span class="info-text">店舗における新型コロナウイルス感染者の発生について（モスバーガー近鉄あべの橋店）</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a class="info-all" href="javascript:;">一覧</a>
           </div>
-          <a href=""></a>
+          
           <p></p>
         </div>
       </div>
@@ -380,7 +409,8 @@
           <li>
             <a href="javascript:;">
               <div class="card">
-                <img class="card-img-quality"
+                <img
+                  class="card-img-quality"
                   src="./img/other/quality.svg"
                   alt="quality img"
                 >
@@ -392,7 +422,8 @@
           <li>
             <a href="javascript:;">
               <div class="card">
-                <img class="card-img-mostopi"
+                <img
+                  class="card-img-mostopi"
                   src="./img/other/mostopi.svg"
                   alt="mostopi img"
                 >
@@ -404,7 +435,8 @@
           <li>
             <a href="javascript:;">
               <div class="card">
-                <img class="card-img-omoi-logo"
+                <img
+                  class="card-img-omoi-logo"
                   src="./img/other/omoi_logo.png"
                   alt="omoi logo"
                 >
@@ -621,21 +653,55 @@
     }
   }
 
-  // swiper
-  const swiper = new Swiper('.swiper', {
+  // banner-view-swiper
+  const banner_view_swiper = new Swiper('.banner-view-swiper', {
     // Optional parameters
     loop: true,
     autoplay: {
-      delay: 5000,
+      delay: 7000,
     },
+    spaceBetween: 20,
+    
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
+    
 
     // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-    },
+    }
 
   });
+
+  // banner-info-swiper
+  const banner_info_swiper = new Swiper('.banner-info-swiper', {
+    // 方向垂直
+    direction: "vertical",
+    loop: true,
+    autoplay: {
+      delay: 6000,
+    },
+    slidesPerView: 1,
+    
+    // effect: 'coverflow',
+    // coverflowEffect: {
+    //   rotate: 100,
+    //   slideShadows: false,
+    // },
+    // spaceBetween: 20,
+    // direction: horizontal,
+
+    // Navigation arrows
+    // navigation: {
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev',
+    // }
+
+  });
+
 
 </script>
 

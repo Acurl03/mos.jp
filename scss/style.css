@@ -61,6 +61,7 @@ table {
 
 body {
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 a {
@@ -683,17 +684,12 @@ a {
   margin: 20px;
 }
 
-.banner-swiper-wrap {
+.banner-view-swiper {
   width: 100%;
   height: 100%;
 }
 
-.banner-swiper-wrap .swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.banner-swiper-wrap .swiper-slide {
+.banner-view-swiper .swiper-slide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -705,12 +701,14 @@ a {
   align-items: center;
 }
 
-.banner-swiper-wrap .swiper-slide img {
+.banner-view-swiper .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 .banner-app {
@@ -720,11 +718,138 @@ a {
   z-index: 2;
 }
 
+@media screen and (max-width: 768px) {
+  .banner-app {
+    width: calc(100% - 15px * 2);
+    left: 15px;
+    bottom: 15px;
+    right: auto;
+  }
+}
+
+.banner-app .banner-app-link {
+  width: 230px;
+  height: 86px;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.banner-app .banner-app-link:hover .app-text {
+  opacity: 0.3;
+}
+
+.banner-app .banner-app-link .app-img {
+  width: 50px;
+  position: absolute;
+  bottom: 6px;
+  left: 12px;
+}
+
+.banner-app .banner-app-link .app-text {
+  font-size: 14px;
+  margin: 0 0 0 74px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.banner-app .banner-app-link .app-tag {
+  width: 80px;
+  height: 25px;
+  font-size: 12px;
+  background-color: #00A728;
+  border-radius: 3px;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top: -15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .banner-info {
+  min-width: 390px;
+  height: 19px;
+  display: block;
   position: absolute;
   left: 60px;
   bottom: 50px;
   z-index: 2;
+}
+
+.banner-info .banner-info-container {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-y: hidden;
+}
+
+.banner-info .banner-info-container .swiper-wrapper {
+  width: 100%;
+  height: 19px;
+}
+
+.banner-info .banner-info-container .swiper-wrapper .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.banner-info .banner-info-container .swiper-wrapper .swiper-slide .swiper-slide-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.banner-info .banner-info-container .swiper-wrapper .swiper-slide .swiper-slide-link .info-date {
+  color: #00A728;
+  font-weight: bold;
+  margin-right: 15 px;
+}
+
+.banner-info .banner-info-container .swiper-wrapper .swiper-slide .swiper-slide-link .info-text {
+  width: 300px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+@media screen and (max-width: 1199px) {
+  .banner-info .banner-info-container .swiper-wrapper .swiper-slide .swiper-slide-link .info-text {
+    width: 240px;
+  }
+}
+
+.banner-info .banner-info-container .info-all {
+  font-size: 14px;
 }
 
 /* ////////////////////
@@ -745,12 +870,21 @@ section {
   max-width: 1000px;
 }
 
+@media screen and (max-width: 768px) {
+  .notice {
+    padding: 0 0 30px;
+    width: 100%;
+  }
+}
+
 .notice.bb-none {
   border-bottom: none;
 }
 
 .notice .notice-title {
-  color: #d70c19;
+  color: #e90000;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .notice p a {
@@ -760,6 +894,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 14px;
 }
 
 .notice p a::before {
@@ -774,11 +909,17 @@ section {
 
 .notice .notice-btn {
   display: inline-block;
-  width: 1000px;
+  width: 100%;
   background: #e90000 url(../img/icon/angle_right_white.svg) 44px 50%/8px 14px no-repeat;
   border: none;
   border-radius: 10px;
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .notice .notice-btn {
+    background: #e90000 url(../img/icon/angle_right_white.svg) 5% 50%/6px 11px no-repeat;
+  }
 }
 
 .notice .notice-btn a {
@@ -787,7 +928,15 @@ section {
   font-size: 22px;
   font-weight: 400;
   line-height: 1.2;
-  color: white;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .notice .notice-btn a {
+    font-size: 14px;
+    font-weight: 700;
+    padding: 4% 8%;
+  }
 }
 
 /* ////new topic 
@@ -1185,10 +1334,7 @@ section {
   margin: 0 30px;
 }
 
-.member-list > li:hover .member-card-content::before {
-  opacity: 0.7;
-}
-
+.member-list > li:hover .member-card-content::before,
 .member-list > li:hover .net-order-content::before {
   opacity: 0.7;
 }
@@ -1222,7 +1368,8 @@ section {
   height: 30px;
 }
 
-.member-list .member-card-content {
+.member-list .member-card-content,
+.member-list .net-order-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1240,21 +1387,20 @@ section {
   color: #fff;
 }
 
-.member-list .member-card-content::before {
+.member-list .member-card-content::before,
+.member-list .net-order-content::before {
   content: '';
   display: block;
-  width: 348px;
-  height: 125px;
-  background: url(../img/member/member_card.png) no-repeat;
-  background-size: 348px 125px;
   margin-bottom: 20px;
-  opacity: 1;
-  -webkit-transform: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
-          transform: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 @media screen and (max-width: 768px) {
-  .member-list .member-card-content::before {
+  .member-list .member-card-content::before,
+  .member-list .net-order-content::before {
     width: 270px;
     height: 97px;
     background-size: 270px 97px;
@@ -1262,56 +1408,25 @@ section {
 }
 
 @media screen and (max-width: 768px) {
-  .member-list .member-card-content {
-    font-size: 15px;
-    margin-bottom: 35px;
-  }
-}
-
-.member-list .net-order-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-  color: #fff;
-}
-
-.member-list .net-order-content::before {
-  content: '';
-  display: block;
-  width: 335px;
-  height: 125px;
-  background: url(../img/member/member_net_order.png) no-repeat;
-  background-size: 335px 125px;
-  margin-bottom: 20px;
-  opacity: 1;
-  -webkit-transform: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
-          transform: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
-}
-
-@media screen and (max-width: 768px) {
-  .member-list .net-order-content::before {
-    width: 256px;
-    height: 111px;
-    background-size: 256px 111px;
-  }
-}
-
-@media screen and (max-width: 768px) {
+  .member-list .member-card-content,
   .member-list .net-order-content {
     font-size: 15px;
     margin-bottom: 35px;
   }
+}
+
+.member-list .member-card-content::before {
+  width: 348px;
+  height: 125px;
+  background: url(../img/member/member_card.png) no-repeat;
+  background-size: 348px 125px;
+}
+
+.member-list .net-order-content::before {
+  width: 335px;
+  height: 125px;
+  background: url(../img/member/member_net_order.png) no-repeat;
+  background-size: 335px 125px;
 }
 
 .member-btn {

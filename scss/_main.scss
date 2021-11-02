@@ -17,13 +17,10 @@
   margin: 20px;
 }
 // swiper
-.banner-swiper-wrap {
+.banner-view-swiper {
   width: 100%;
   height: 100%;
-  .swiper {
-    width: 100%;
-    height: 100%;
-  }
+
   .swiper-slide {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -43,6 +40,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
   }
 }
 .banner-app {
@@ -50,13 +48,112 @@
   right: 45px;
   bottom: 45px;
   z-index: 2;
+  @media screen and (max-width: 768px) {
+    width: calc(100% - 15px * 2);
+    left: 15px;
+    bottom: 15px;
+    right: auto;
+  }
+  .banner-app-link {
+    width: 230px;
+    height: 86px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    display: flex;
+    &:hover .app-text {
+      opacity: 0.3;
+    }
+
+    .app-img {
+      width: 50px;
+
+      position: absolute;
+      bottom: 6px;
+      left: 12px;
+      // @media screen and (max-width: 768px) {
+      //   top: -10px;
+      //   left: 10px;
+      // }
+    }
+    .app-text {
+      font-size: 14px;
+      margin: 0 0 0 74px;
+
+      display: flex;
+      align-items: center;
+      transition: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+    }
+    .app-tag {
+      width: 80px;
+      height: 25px;
+      font-size: 12px;
+      background-color: $primary-color;
+      border-radius: 3px;
+      color: #fff;
+
+      position: absolute;
+      right: 0;
+      top: -15px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }
 .banner-info {
+  min-width: 390px;
+  height: 19px;
+
+  display: block;
   position: absolute;
   left: 60px;
   bottom: 50px;
   z-index: 2;
-  // min-width: 390px;
+  
+
+  .banner-info-container {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+
+    display: flex;
+    align-items: center;
+    // position: relative;
+    overflow-y: hidden;
+    .swiper-wrapper {
+      width: 100%;
+      height: 19px;
+      .swiper-slide {
+        display: flex;
+        .swiper-slide-link {
+          display: flex;
+          align-items: center;
+          .info-date {
+            color: $primary-color;
+            font-weight: bold;
+            margin-right: 15 px;
+          }
+          .info-text {
+            width: 300px;
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+            @media screen and (max-width: 1199px) {
+              width: 240px;
+            }
+          }
+        }
+      }
+    }
+    .info-all {
+      font-size: 14px;
+    }
+  }
 }
 
 /* ////////////////////
@@ -73,16 +170,23 @@ section {
   margin: 0 auto;
   padding: 0 0 35px;
   max-width: 1000px;
+  @media screen and (max-width: 768px) {
+    padding: 0 0 30px;
+    width: 100%;
+  }
   &.bb-none {
     border-bottom: none;
   }
   .notice-title {
-    color: $sub-color;
+    color: #e90000;
+    font-weight: 700;
+    margin-bottom: 10px;
   }
   p {
     a {
       display: flex;
       align-items: center;
+      font-size: 14px;
       &::before {
         content: '';
         background: url(../img/icon/angle_right_black.svg) no-repeat;
@@ -96,20 +200,28 @@ section {
   }
   .notice-btn {
     display: inline-block;
-    width: 1000px;
+    width: 100%;
     background: #e90000 url(../img/icon/angle_right_white.svg) 44px 50% / 8px
       14px no-repeat;
     border: none;
     border-radius: 10px;
     text-align: center;
-
+    @media screen and (max-width: 768px) {
+      background: #e90000 url(../img/icon/angle_right_white.svg) 5% 50% / 6px
+        11px no-repeat;
+    }
     a {
       display: block;
       padding: 22px 70px;
       font-size: 22px;
       font-weight: 400;
       line-height: 1.2;
-      color: white;
+      color: #fff;
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+        font-weight: 700;
+        padding: 4% 8%;
+      }
     }
   }
 }
@@ -405,9 +517,7 @@ section {
   }
   > li {
     margin: 0 30px;
-    &:hover .member-card-content::before {
-      opacity: 0.7;
-    }
+    &:hover .member-card-content::before,
     &:hover .net-order-content::before {
       opacity: 0.7;
     }
@@ -435,7 +545,8 @@ section {
       height: 30px;
     }
   }
-  .member-card-content {
+  .member-card-content,
+  .net-order-content {
     display: flex;
     flex-direction: column;
     // orient:垂直或水平，vertical垂直
@@ -454,13 +565,10 @@ section {
     &::before {
       content: '';
       display: block;
-      width: 348px;
-      height: 125px;
-      background: url(../img/member/member_card.png) no-repeat;
-      background-size: 348px 125px;
       margin-bottom: 20px;
-      opacity: 1;
-      transform: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+      backface-visibility: hidden;
+      transition: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+
       @media screen and (max-width: 768px) {
         width: 270px;
         height: 97px;
@@ -472,33 +580,17 @@ section {
       margin-bottom: 35px;
     }
   }
-  .net-order-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-    &::before {
-      content: '';
-      display: block;
-      width: 335px;
-      height: 125px;
-      background: url(../img/member/member_net_order.png) no-repeat;
-      background-size: 335px 125px;
-      margin-bottom: 20px;
-      opacity: 1;
-      transform: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
-      @media screen and (max-width: 768px) {
-        width: 256px;
-        height: 111px;
-        background-size: 256px 111px;
-      }
-    }
-    @media screen and (max-width: 768px) {
-      font-size: 15px;
-      margin-bottom: 35px;
-    }
+  .member-card-content::before {
+    width: 348px;
+    height: 125px;
+    background: url(../img/member/member_card.png) no-repeat;
+    background-size: 348px 125px;
+  }
+  .net-order-content::before {
+    width: 335px;
+    height: 125px;
+    background: url(../img/member/member_net_order.png) no-repeat;
+    background-size: 335px 125px;
   }
 }
 .member-btn {
@@ -539,6 +631,7 @@ section {
       text-align: center;
       position: relative;
       transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+
       @media screen and (max-width: 768px) {
         font-size: 16px;
       }
