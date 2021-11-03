@@ -509,6 +509,7 @@
       </div>
       </div>
     </section>
+    <!-- tasty -->
     <section class="section">
       <div class="section-container">
         <div class="section-title">
@@ -575,6 +576,7 @@
         </ul>
       </div>
     </section>
+    <!-- member -->
     <section class="section">
       <div class="member-container">
         <div class="member-content">
@@ -602,33 +604,42 @@
         </div>
         <hr class="member-hr">
         <!-- mobile時swiper -->
-        <div class="member-swiper-wrap">
+        <div class="member-swiper-container">
           <!-- Slider main container -->
-          <div class="swiper">
+          <div class="member-swiper">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
-              <div class="swiper-slide"><a href="javascript:;">
-                  <div class="slide-img-wrap"><img
-                      src="./img/member/th_mem_cardpre.png"
-                      alt=""
-                    ></div>
+              <div class="swiper-slide">
+                <a href="javascript:;">
+
+                  <img
+                    src="./img/member/th_mem_cardpre.png"
+                    alt=""
+                  >
                   <p>MOSポイント プレゼントキャンペーンを実施中！感謝の気持ちを込めて、皆さまに当選のチャンス。</p>
-                </a></div>
-              <div class="swiper-slide"><a href="javascript:;">
-                  <div class="slide-img-wrap"><img
-                      src="./img/member/th_mem_usage.png"
-                      alt=""
-                    ></div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:;">
+
+                  <img
+                    src="./img/member/th_mem_usage.png"
+                    alt=""
+                  >
+
                   <p>【モスカードの特典フル活用術】モスカードとネット注文の特典を知っているだけでこんなにお得！</p>
-                </a></div>
-              <div class="swiper-slide"><a href="javascript:;">
-                  <div class="slide-img-wrap"><img
-                      src="./img/member/th_mem_rank.png"
-                      alt=""
-                    ></div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:;">
+                  <img
+                    src="./img/member/th_mem_rank.png"
+                    alt=""
+                  >
                   <p>モスカードでネット決済すると、さらにお得！</p>
-                </a></div>
+                </a>
+              </div>
             </div>
             <!-- If we need navigation buttons -->
             <div class="swiper-button-prev"></div>
@@ -637,6 +648,7 @@
         </div>
       </div>
     </section>
+    <!-- social -->
     <section class="section">
       <ul class="social-list">
         <li><a href="javascript:;"><img
@@ -662,6 +674,7 @@
       </ul>
 
     </section>
+    <!-- feat -->
     <section class="feat-section">
       <ul class="feat-list">
         <li><a href="javascript:;"><img
@@ -858,6 +871,37 @@
       },
     },
 
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  // member-swiper
+  const member_swiper = new Swiper('.member-swiper', {
+
+    slidesPerView: 3,
+    spaceBetween: 30,
+    slidesPerGroup: 3,
+    // If we need pagination
+
+    breakpoints: {
+      // 768以上
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 3,
+
+      },
+      // 320以上
+      320: {
+        slidesPerView: 2.5,
+        spaceBetween: 20,
+        slidesPerGroup: 1,
+
+      },
+    },
     // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
