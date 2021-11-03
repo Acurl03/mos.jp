@@ -403,8 +403,58 @@ section {
   }
 }
 
-/* swiper */
+/* news(service)-swiper */
+.news-swiper-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  // z-index: 2;
 
+  // 上一個按鈕、下一個按鈕
+  .swiper-button-prev, .swiper-button-next {
+    top: 25%;
+    
+  }
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-size: inherit;
+    color: rgb(70, 69, 69);
+  }
+  
+  .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+    opacity: 0;
+  }
+}
+
+.news-swiper {
+  max-width: 1200px;
+  margin: 0px 54px 40px;
+  position: relative;
+  width: calc(100% - 54px * 2);
+  overflow: hidden;
+  .swiper-wrapper {
+    margin-bottom: 40px;
+    display: flex;
+    .swiper-slide {
+      a {
+        img {
+          width: 100%;
+          border-radius: 10px;
+          margin-bottom: 20px;
+          backface-visibility: hidden;
+          transition: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1) 0s;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  // 點點點按鈕
+  .swiper-pagination {
+  }
+}
 /* service-list & tasty-list */
 .service-list,
 .tasty-list {
@@ -582,7 +632,7 @@ section {
     // align-items: center;
     // align-items: flex-start;
     // justify-content: center;
-    
+
     .swiper-slide {
       width: calc(50% - 15px * 2);
       display: flex;
@@ -622,7 +672,7 @@ section {
     border: 1px solid rgb(156, 83, 70);
     width: 50px;
     height: 50px;
-    top: 90%
+    top: 90%;
   }
 }
 

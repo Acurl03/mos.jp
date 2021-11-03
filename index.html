@@ -291,9 +291,107 @@
             ></h2>
           <p>新商品／最新情報をご紹介</p>
         </div>
-        <div class="section-swiper">
+        <div class="news-swiper-container">
+          <!-- Slider main container -->
+          <div class="news-swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <a href="javascript:;">
+                  <img
+                    src="./img/news/newsrelease.jpg"
+                    alt="newsrelease"
+                  >
+                  <p>【予告】この冬、とびきり甘辛～い出会いの予感。11月11日（木）START！</p>
+                </a>
+
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:;">
+                  <img
+                    src="./img/news/nt_syuryouitem.png"
+                    alt="syuryouitem"
+                  >
+                  <p>【期間限定】フォカッチャサンド 馬蹄型（ばていけい）ソーセージ＆グランピングソースなどが、もうすぐ販売終了！</p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:;">
+                  <img
+                    src="./img/news/mori.jpg"
+                    alt="mori"
+                  >
+                  <p>モスグループの社会貢献活動・地域活動などを発信。一つひとつの歩みからより良い明日につなげるため、小さな実から大きな森を育むように「モスの森」を育てていきます。</p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:;">
+                  <img
+                    src="./img/news/th_mem_cardpre.png"
+                    alt="cardpre"
+                  >
+                  <p>MOSポイント プレゼントキャンペーンを実施中！感謝の気持ちを込めて、皆さまに当選のチャンス。</p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:;">
+                  <img
+                    src="./img/news/nt_moschiken.png"
+                    alt="moschiken"
+                  >
+                  <p>モスチキンチケット販売中。ギフトにもご利用いただけるチケットです。12月12日（日）までは早割で100円引き！</p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:;">
+                  <img
+                    src="./img/news/nt_focacciasand.png"
+                    alt="focacciasand"
+                  >
+                  <p>食べたら、気分はアウトドア。【期間限定】フォカッチャサンド。9月22日（水）から。</p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:;">
+                  <img
+                    src="./img/news/nt_kanahei.jpg"
+                    alt="kanahei"
+                  >
+                  <p>モスワイワイセットにいまならえらべる「カナヘイの小動物」オリジナルグッズ登場！9月22日（水）からなくなり次第終了。</p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:;">
+                  <img
+                    src="./img/news/nt_greenburger.png"
+                    alt="kanahei"
+                  >
+                  <p>グリーンバーガー ＜テリヤキ＞主要原材料に動物性食材を使わず、野菜と穀物を主原料に作ったハンバーガーです。</p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:;">
+                  <img
+                    src="./img/news/nt_dessert.png"
+                    alt="dessert"
+                  >
+                  <p>【期間限定】まぜるシェイク アップルマンゴー＜宮崎＞＆まぜるシェイク ぶどう＜長野＞発売中！</p>
+                </a>
+              </div>
+
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+
+          </div>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
 
         </div>
+
         <ul class="section-btn">
           <li class="btn-sm"><a href="javascript:;">メニュー</a></li>
           <li class="btn-sm"><a href="javascript:;">キャンペーン</a></li>
@@ -720,22 +818,38 @@
 
 
   });
-  // attest-swiper
-  const attest_swiper = new Swiper('.attest-swiper', {
 
-    breakpoints: {
-      768: {
-        slidesPerView: 1,
-        spaceBetween: 10,
-      },
+  // attest-swiper 開js後，往前往後按鈕會不見
+  // const attest_swiper = new Swiper('.attest-swiper', {
+
+  //   breakpoints: {
+  //     768: {
+  //       slidesPerView: 1,
+  //       spaceBetween: 10,
+  //     },
+  //   },
+  //   navigation: {
+  //     nextEl: '.swiper-button-next',
+  //     prevEl: '.swiper-button-prev',
+  //   }
+
+  // });
+  // news-swiper
+  const news_swiper = new Swiper('.news-swiper', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    slidesPerGroup: 3,
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
     },
+
+    // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-    }
-
+    },
   });
-
 </script>
 
 
