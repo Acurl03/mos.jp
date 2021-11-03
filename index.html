@@ -282,7 +282,7 @@
     </section>
     <!-- new topic -->
     <section class="section">
-      <div class="section-container">
+      <div class="news-section-container">
         <div class="section-title">
           <h2><img
               class="topics-title"
@@ -383,13 +383,10 @@
             </div>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
-
-
           </div>
           <!-- If we need navigation buttons -->
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
-
         </div>
 
         <ul class="section-btn">
@@ -836,12 +833,29 @@
   // });
   // news-swiper
   const news_swiper = new Swiper('.news-swiper', {
+
     slidesPerView: 3,
     spaceBetween: 30,
     slidesPerGroup: 3,
     // If we need pagination
     pagination: {
       el: '.swiper-pagination',
+    },
+    breakpoints: {
+      // 768以上
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 3,
+
+      },
+      // 320以上
+      320: {
+        slidesPerView: 2.5,
+        spaceBetween: 20,
+        slidesPerGroup: 2,
+
+      },
     },
 
     // Navigation arrows
