@@ -1513,7 +1513,24 @@ section {
   margin: 0 10px;
 }
 
-.section-btn .btn-sm a {
+@media screen and (max-width: 768px) {
+  .section-btn .btn-sm {
+    width: 90px;
+  }
+}
+
+.section-btn .btn-md {
+  width: 190px;
+  margin: 0 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .section-btn .btn-md {
+    width: 130px;
+  }
+}
+
+.section-btn .btn-common a {
   display: block;
   background-color: #00A728;
   color: #fff;
@@ -1528,21 +1545,21 @@ section {
 }
 
 @media screen and (max-width: 768px) {
-  .section-btn .btn-sm a {
+  .section-btn .btn-common a {
     font-size: 14px;
   }
 }
 
-.section-btn .btn-sm a:hover {
+.section-btn .btn-common a:hover {
   background-color: #fff;
   color: #00A728;
 }
 
-.section-btn .btn-sm a:hover::before {
+.section-btn .btn-common a:hover::before {
   background: url(../img/icon/angle_right_green.svg) no-repeat;
 }
 
-.section-btn .btn-sm a::before {
+.section-btn .btn-common a::before {
   content: '';
   display: block;
   width: 5px;

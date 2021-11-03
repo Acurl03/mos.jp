@@ -625,7 +625,19 @@ section {
   .btn-sm {
     width: 120px;
     margin: 0 10px;
+    @media screen and (max-width: 768px) {
+      width: 90px;
+    }
+  }
+  .btn-md {
+    width: 190px;
+    margin: 0 10px;
+    @media screen and (max-width: 768px) {
+      width: 130px;
 
+    }
+  }
+  .btn-common {
     a {
       // display: flex;
       display: block;
