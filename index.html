@@ -182,18 +182,9 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
-              <div class="swiper-slide"><img
-                  src="./img/banner/focacciasand_pc.jpg"
-                  alt=""
-                ></div>
-              <div class="swiper-slide"><img
-                  src="./img/banner/kana_pc.jpg"
-                  alt=""
-                ></div>
-              <div class="swiper-slide"><img
-                  src="./img/banner/mosmd_pc.jpg"
-                  alt=""
-                ></div>
+              <div class="swiper-slide bg-img1"></div>
+              <div class="swiper-slide bg-img2"></div>
+              <div class="swiper-slide bg-img3"></div>
             </div>
             <!-- If we need navigation buttons -->
             <div class="swiper-button-prev"></div>
@@ -866,9 +857,15 @@
         slidesPerView: 2,
         spaceBetween: 40,
       },
+      // 425以上
+      425: {
+        slidesPerView: 1.5,
+        spaceBetween: 20,
+
+      },
       // 320以上
       320: {
-        slidesPerView: 1.5,
+        slidesPerView: 1,
         spaceBetween: 20,
 
       },
@@ -928,9 +925,17 @@
         slidesPerGroup: 3,
 
       },
+
+      // 425以上
+      425: {
+        slidesPerView: 1.5,
+        spaceBetween: 20,
+        slidesPerGroup: 1,
+
+      },
       // 320以上
       320: {
-        slidesPerView: 2.5,
+        slidesPerView: 1,
         spaceBetween: 20,
         slidesPerGroup: 1,
 
