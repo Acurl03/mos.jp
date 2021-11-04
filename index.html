@@ -464,18 +464,21 @@
         </ul>
       </div>
     </section>
-
+    <!-- attest -->
     <section class="section">
-      <div class="attest-container">
+      
+      <div class="attest-swiper-container">
+        <!-- Slider main container -->
         <div class="attest-swiper">
           <!-- Additional required wrapper -->
-          <div class="attest-swiper-wrapper">
+          <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide">
               <a
                 class="slide-title"
                 href="javascript:;"
-              ><img
+              >
+                <img
                   src="./img/other/banner_beyond.png"
                   alt="beyond2020"
                 >
@@ -483,10 +486,9 @@
               <div class="slide-text">
                 <p>モスバーガーはbeyond 2020 プログラムに認証されています。</p>
                 <p>><a href="javascript:;">詳細はこちら</a></p>
-
+              
               </div>
             </div>
-
             <div class="swiper-slide">
               <a
                 class="slide-title"
@@ -505,8 +507,6 @@
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
         </div>
-
-      </div>
       </div>
     </section>
     <!-- tasty -->
@@ -829,21 +829,28 @@
 
   });
 
-  // attest-swiper 開js後，往前往後按鈕會不見
-  // const attest_swiper = new Swiper('.attest-swiper', {
+  // attest-swiper 開js後，往前往後按鈕會不見，因為父層沒有position
+  const attest_swiper = new Swiper('.attest-swiper', {
+    slidesPerView: 2,
+    spaceBetween: 40,
+    breakpoints: {
+      // 768以上
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      // 320以上
+      320: {
+        slidesPerView: 1.5,
+        spaceBetween: 20,
 
-  //   breakpoints: {
-  //     768: {
-  //       slidesPerView: 1,
-  //       spaceBetween: 10,
-  //     },
-  //   },
-  //   navigation: {
-  //     nextEl: '.swiper-button-next',
-  //     prevEl: '.swiper-button-prev',
-  //   }
-
-  // });
+      },
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  });
   // news-swiper
   const news_swiper = new Swiper('.news-swiper', {
 
@@ -884,7 +891,7 @@
     slidesPerView: 3,
     spaceBetween: 30,
     slidesPerGroup: 3,
-    // If we need pagination
+
 
     breakpoints: {
       // 768以上
