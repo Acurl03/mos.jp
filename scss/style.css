@@ -893,6 +893,10 @@ a {
   display: flex;
 }
 
+.banner-info .banner-info-container .swiper-wrapper .swiper-slide:hover .info-text {
+  opacity: .7;
+}
+
 .banner-info .banner-info-container .swiper-wrapper .swiper-slide .swiper-slide-link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -926,8 +930,8 @@ a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  -webkit-transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
-  transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+  -webkit-transition: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 @media screen and (max-width: 1199px) {
@@ -1254,7 +1258,7 @@ section {
     display: block;
     width: 1px;
     height: 1rem;
-    background-color: #000;
+    background-color: #bab8b8;
     position: absolute;
     right: -31px;
   }
@@ -1291,7 +1295,7 @@ section {
     display: block;
     width: 1px;
     height: 1rem;
-    background-color: #000;
+    background-color: #bab8b8;
     position: absolute;
     left: -30px;
   }
@@ -1300,7 +1304,7 @@ section {
 .news-swiper-container .swiper-button-prev:after,
 .news-swiper-container .swiper-button-next:after {
   font-size: inherit;
-  color: #464545;
+  color: #bab8b8;
 }
 
 .news-swiper-container .swiper-button-next.swiper-button-disabled,
@@ -1337,6 +1341,10 @@ section {
   }
 }
 
+.news-swiper .swiper-wrapper .swiper-slide:hover img {
+  opacity: .7;
+}
+
 .news-swiper .swiper-wrapper .swiper-slide a img {
   width: 100%;
   border-radius: 10px;
@@ -1360,6 +1368,20 @@ section {
 .news-swiper .swiper-pagination-bullet-active {
   background: inherit;
   background-color: #00A728;
+}
+
+.section-hr {
+  margin: 0 auto;
+  height: 1px;
+  background-color: #e5e5e5;
+  border: none;
+  max-width: 700px;
+}
+
+@media screen and (max-width: 768px) {
+  .section-hr {
+    width: calc(100vw * 350 / 750);
+  }
 }
 
 /* service-list & tasty-list */
@@ -1404,8 +1426,8 @@ section {
   }
 }
 
-.service-list > li:hover .card img,
-.tasty-list > li:hover .card img {
+.service-list > li:hover .card-img,
+.tasty-list > li:hover .card-img {
   opacity: 0.7;
 }
 
@@ -1414,6 +1436,9 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -1452,7 +1477,6 @@ section {
           justify-content: center;
   -webkit-transition: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
   transition: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
-  margin-bottom: 20px;
 }
 
 .card .card-img img {
@@ -1837,6 +1861,9 @@ section {
     width: 280px;
     margin: 0 0 25px;
   }
+  .member-btn .btn-lg:last-child {
+    margin: 0;
+  }
 }
 
 .member-btn .btn-lg:last-child a {
@@ -1883,6 +1910,21 @@ section {
   position: absolute;
   top: calc(50% - 4px);
   left: 20px;
+}
+
+.member-hr {
+  background-color: #fff;
+  opacity: 0.5;
+  border: none;
+  height: 1px;
+  max-width: 1200px;
+  width: calc(100% - 54px * 2);
+}
+
+@media screen and (max-width: 768px) {
+  .member-hr {
+    width: 100%;
+  }
 }
 
 .member-swiper-container {
