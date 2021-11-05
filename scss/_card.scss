@@ -1,0 +1,86 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .card-img {
+    min-height: 80px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+    img {
+      vertical-align: middle;
+    }
+  }
+
+  
+  .card-title {
+    font-size: 18px;
+    color: $primary-color;
+    margin-bottom: 15px;
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+  .card-text {
+    font-size: 14px;
+    @media screen and (max-width: 768px) {
+      font-size: 13px;
+    }
+  }
+}
+
+// shop/service
+  .card-img-search {
+    width: 106px;
+  }
+  .card-img-order {
+    width: 106px;
+  }
+  .card-img-service {
+    width: 80px;
+  }
+  .card-img-card {
+    width: 90px;
+  }
+  // tasty
+  .card-img-omoi {
+    width: 135px;
+  }
+  .card-img-quality {
+    width: 81px;
+  }
+  .card-img-mostopi {
+    width: 96px;
+  }
+  .card-img-omoi-logo {
+    width: 56px;
+  }
+  @media screen and (max-width: 768px) {
+    .card-img-search {
+      width: 71px;
+    }
+    .card-img-order {
+      width: 69px;
+    }
+    .card-img-service {
+      width: 61px;
+    }
+    .card-img-card {
+      width: 61px;
+    }
+    .card-img-omoi {
+      width: 75px;
+    }
+    .card-img-quality {
+      width: 51px;
+    }
+    .card-img-mostopi {
+      width: 58px;
+    }
+    .card-img-omoi-logo {
+      width: 38px;
+    }
+  }

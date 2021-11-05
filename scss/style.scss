@@ -1,8 +1,23 @@
 @import 'variable';
 @import 'base';
+
+// layout
 @import 'header';
-@import 'main';
-@import 'attest';
-@import 'aside';
 @import 'footer';
+
+
+@import 'notice';
+@import 'main';
+@import 'member';
+@import 'attest';
+@import 'feat';
+@import 'banner';
+
+
+
+// element conponent
+@import 'card';
+
+// template conponent
+@import 'custom_swiper';
 

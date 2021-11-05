@@ -630,31 +630,36 @@
               <!-- Slides -->
               <div class="swiper-slide">
                 <a href="javascript:;">
+                  <div class="slide-img">
+                    <img
+                      src="./img/member/th_mem_cardpre.png"
+                      alt="member card"
+                    >
+                  </div>
 
-                  <img
-                    src="./img/member/th_mem_cardpre.png"
-                    alt=""
-                  >
                   <p>MOSポイント プレゼントキャンペーンを実施中！感謝の気持ちを込めて、皆さまに当選のチャンス。</p>
                 </a>
               </div>
               <div class="swiper-slide">
                 <a href="javascript:;">
-
-                  <img
-                    src="./img/member/th_mem_usage.png"
-                    alt=""
-                  >
-
+                  <div class="slide-img">
+                    <img
+                      src="./img/member/th_mem_usage.png"
+                      alt="member usage"
+                    >
+                  </div>
                   <p>【モスカードの特典フル活用術】モスカードとネット注文の特典を知っているだけでこんなにお得！</p>
                 </a>
               </div>
               <div class="swiper-slide">
                 <a href="javascript:;">
-                  <img
-                    src="./img/member/th_mem_rank.png"
-                    alt=""
-                  >
+                  <div class="slide-img">
+                    <img
+                      src="./img/member/th_mem_rank.png"
+                      alt=""
+                    >
+                  </div>
+
                   <p>モスカードでネット決済すると、さらにお得！</p>
                 </a>
               </div>
@@ -698,18 +703,26 @@
         <div class="pagetop"></div>
       </div>
       <ul class="feat-list">
-        <li><a href="javascript:;"><img
-              src="./img/other/ft_mosdo.png"
-              alt="mosdo"
-            ></a></li>
-        <li><a href="javascript:;"><img
-              src="./img/other/ft_vegetables.png"
-              alt="vegetables"
-            ></a></li>
+        <li><a href="javascript:;">
+            <div class="link-img">
+              <img
+                src="./img/other/ft_mosdo.png"
+                alt="mosdo"
+              >
+            </div>
+          </a></li>
+        <li><a href="javascript:;">
+            <div class="link-img">
+              <img
+                src="./img/other/ft_vegetables.png"
+                alt="vegetables"
+              >
+            </div>
+          </a></li>
       </ul>
     </section>
   </main>
-  
+
   <footer>
     <div class="footer-container">
       <div class="footer-grid">
@@ -790,6 +803,7 @@
   crossorigin="anonymous"
 ></script>
 <script src="./js/pagetop.js"></script>
+<script src="./js/custom_swiper.js"></script>
 
 <script>
   const btn = document.querySelector('.m-nav-btn')
@@ -799,19 +813,14 @@
   const m_menu = document.querySelector('.nav-link')
   const header = document.querySelector('.header-section')
   const nav = document.querySelector('.nav-wrap')
-  // const pagetop = document.querySelector('.aside-pagetop')
-
-
   // btn click
   btn.addEventListener('click', function () {
     btn.classList.toggle("btn_open")
-
     btn_top.classList.toggle("btn_open")
     btn_mid.classList.toggle("btn_open")
     btn_bot.classList.toggle("btn_open")
     m_menu.classList.toggle("btn_open")
   })
-
   // nav fixed
   window.onscroll = function () {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -822,146 +831,7 @@
       nav.classList.remove('nav-fixed')
     }
 
-
   }
-  
-
-  // banner-view-swiper
-  const banner_view_swiper = new Swiper('.banner-view-swiper', {
-    // Optional parameters
-    loop: true,
-    autoplay: {
-      delay: 6000,
-    },
-    spaceBetween: 20,
-
-    effect: 'fade',
-    fadeEffect: {
-      crossFade: true
-    },
-
-
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    }
-
-  });
-
-  // banner-info-swiper
-  const banner_info_swiper = new Swiper('.banner-info-swiper', {
-    // 方向垂直
-    direction: "vertical",
-    loop: true,
-    autoplay: {
-      delay: 4000,
-    },
-    slidesPerView: 1,
-
-
-  });
-
-  // attest-swiper 開js後，往前往後按鈕會不見，因為父層沒有position
-  const attest_swiper = new Swiper('.attest-swiper', {
-    slidesPerView: 2,
-    spaceBetween: 40,
-    breakpoints: {
-      // 768以上
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 40,
-      },
-      // 425以上
-      425: {
-        slidesPerView: 1.5,
-        spaceBetween: 20,
-
-      },
-      // 320以上
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-
-      },
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    }
-  });
-  // news-swiper
-  const news_swiper = new Swiper('.news-swiper', {
-
-    slidesPerView: 3,
-    spaceBetween: 30,
-    slidesPerGroup: 3,
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
-    breakpoints: {
-      // 768以上
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        slidesPerGroup: 3,
-
-      },
-      // 320以上
-      320: {
-        slidesPerView: 2.5,
-        spaceBetween: 20,
-        slidesPerGroup: 2,
-
-      },
-    },
-
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
-
-  // member-swiper
-  const member_swiper = new Swiper('.member-swiper', {
-
-    slidesPerView: 3,
-    spaceBetween: 30,
-    slidesPerGroup: 3,
-
-
-    breakpoints: {
-      // 768以上
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        slidesPerGroup: 3,
-
-      },
-
-      // 425以上
-      425: {
-        slidesPerView: 1.5,
-        spaceBetween: 20,
-        slidesPerGroup: 1,
-
-      },
-      // 320以上
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        slidesPerGroup: 1,
-
-      },
-    },
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
 </script>
 
 

@@ -1,0 +1,86 @@
+/* ////////////////////
+notice
+//////////////////// */
+section {
+  display: block;
+}
+.notice-container {
+  margin: 40px 20px 0;
+}
+.notice {
+  border-bottom: 1px solid #e5e5e5;
+  margin: 0 auto;
+  padding: 0 0 35px;
+  max-width: 1000px;
+  @media screen and (max-width: 768px) {
+    padding: 0 0 30px;
+    width: 100%;
+  }
+  &.bb-none {
+    border-bottom: none;
+  }
+  .notice-title {
+    color: #e90000;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  p {
+    a {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      transition: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1) 0s;
+      &:hover {
+        opacity: .3;
+      }
+      &::before {
+        content: '';
+        background: url(../img/icon/angle_right_black.svg) no-repeat;
+        display: block;
+        width: 5px;
+        height: 8px;
+        background-size: 5px 8px;
+        margin-right: 7px;
+      }
+    }
+  }
+  .notice-btn {
+    width: 1000px;
+    padding: 0;
+    display: inline-block;
+    background: #e90000 url(../img/icon/angle_right_white.svg) 44px 50% / 8px
+      14px no-repeat;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    &:hover {
+      background: #fff url(../img/icon/angle_right_red.svg) 44px 50% / 8px 14px no-repeat;
+    }
+    &:hover a {
+      color: #e90000;
+    }
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      background: #e90000 url(../img/icon/angle_right_white.svg) 5% 50% / 6px 11px no-repeat;
+      &:hover {
+        background: #fff url(../img/icon/angle_right_red.svg) 5% 50% / 6px 11px no-repeat;
+      }
+    }
+    a {
+      display: block;
+      padding: 22px 70px;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #fff;
+      border: 1px solid #e90000;
+      border-radius: 10px;
+
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+        font-weight: 700;
+        padding: 4% 8%;
+      }
+    }
+  }
+}

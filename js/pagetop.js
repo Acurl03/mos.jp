@@ -6,16 +6,12 @@ $(function () {
 })
 
 $(function () {
-
+  // let windowtop = $(window).scrollTop()
   let pagetop_up = $('button.notice-btn').offset().top - $(window).height()
-
   $(window).on('scroll', function () {
-    if (
-      $(window).scrollTop() > pagetop_up 
-    ) {
+    if ($(window).scrollTop() >= pagetop_up) {
       $('div.aside-pagetop').addClass('is-fixed')
     } else {
-      console.log('464')
       $('div.aside-pagetop').removeClass('is-fixed')
     }
     
