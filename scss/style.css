@@ -2121,12 +2121,68 @@ section {
 .feat-section {
   background-color: #00A728;
   padding: 35px 0;
+  position: relative;
 }
 
 @media screen and (max-width: 768px) {
   .feat-section {
     padding: 25px 10px;
   }
+}
+
+.feat-section .aside-pagetop {
+  position: absolute;
+  right: 30px;
+  bottom: 200px;
+  -webkit-transition: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+@media screen and (max-width: 768px) {
+  .feat-section .aside-pagetop {
+    right: 10px;
+    bottom: 10px;
+  }
+}
+
+.feat-section .aside-pagetop.is-fixed {
+  position: fixed;
+  bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .feat-section .aside-pagetop.is-fixed {
+    right: 10px;
+    bottom: 10px;
+  }
+}
+
+.feat-section .aside-pagetop .pagetop {
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.95);
+  -webkit-box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.feat-section .aside-pagetop .pagetop::before {
+  content: '';
+  display: block;
+  background: url(../img/icon/pagetop.svg) no-repeat;
+  background-size: 17px 9px;
+  width: 17px;
+  height: 9px;
 }
 
 .feat-list {

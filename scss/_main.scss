@@ -41,7 +41,7 @@
     -webkit-align-items: center;
     align-items: center;
   }
-  
+
   // swiper-slide
   .bg-img1 {
     background-image: url(../img/banner/focacciasand_pc.jpg);
@@ -1092,8 +1092,46 @@ section {
 .feat-section {
   background-color: $primary-color;
   padding: 35px 0;
+  position: relative;
   @media screen and (max-width: 768px) {
     padding: 25px 10px;
+  }
+  .aside-pagetop {
+    position: absolute;
+    right: 30px;
+    bottom: 200px;
+    transition: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+    @media screen and (max-width: 768px) {
+      right: 10px;
+      bottom: 10px;
+    }
+    &.is-fixed {
+      position: fixed;
+      bottom: 30px;
+      @media screen and (max-width: 768px) {
+        right: 10px;
+        bottom: 10px;
+      }
+    }
+    .pagetop {
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      &::before {
+        content: '';
+        display: block;
+        background: url(../img/icon/pagetop.svg) no-repeat;
+        background-size: 17px 9px;
+        width: 17px;
+        height: 9px;
+      }
+    }
   }
 }
 .feat-list {
