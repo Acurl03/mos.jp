@@ -1229,79 +1229,6 @@ section {
   }
 }
 
-/* btns */
-.section-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.section-btn .btn-sm {
-  width: 120px;
-  margin: 0 10px;
-}
-
-@media screen and (max-width: 768px) {
-  .section-btn .btn-sm {
-    width: 90px;
-  }
-}
-
-.section-btn .btn-md {
-  width: 190px;
-  margin: 0 10px;
-}
-
-@media screen and (max-width: 768px) {
-  .section-btn .btn-md {
-    width: 130px;
-  }
-}
-
-.section-btn .btn-common a {
-  display: block;
-  background-color: #00A728;
-  color: #fff;
-  font-size: 16px;
-  padding: 7px 0;
-  border-radius: 30px;
-  border: 1px solid #00A728;
-  text-align: center;
-  position: relative;
-  -webkit-transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
-  transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
-}
-
-@media screen and (max-width: 768px) {
-  .section-btn .btn-common a {
-    font-size: 14px;
-  }
-}
-
-.section-btn .btn-common a:hover {
-  background-color: #fff;
-  color: #00A728;
-}
-
-.section-btn .btn-common a:hover::before {
-  background: url(../img/icon/angle_right_green.svg) no-repeat;
-}
-
-.section-btn .btn-common a::before {
-  content: '';
-  display: block;
-  width: 5px;
-  height: 8px;
-  background: url(../img/icon/angle_right_white.svg) no-repeat;
-  background-size: 5px 8px;
-  position: absolute;
-  top: calc(50% - 4px);
-  left: 12px;
-}
-
 /* social media*/
 .social-list {
   display: -webkit-box;
@@ -1554,89 +1481,6 @@ section {
   height: 125px;
   background: url(../img/member/member_net_order.png) no-repeat;
   background-size: 335px 125px;
-}
-
-.member-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-@media screen and (max-width: 768px) {
-  .member-btn {
-    -ms-flex-direction: column;
-        flex-direction: column;
-    -ms-flex-align: center;
-        align-items: center;
-    -moz-box-align: center;
-    -webkit-box-align: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-  }
-}
-
-.member-btn .btn-lg {
-  width: 240px;
-  margin: 0 15px;
-}
-
-@media screen and (max-width: 768px) {
-  .member-btn .btn-lg {
-    width: 280px;
-    margin: 0 0 25px;
-  }
-  .member-btn .btn-lg:last-child {
-    margin: 0;
-  }
-}
-
-.member-btn .btn-lg:last-child a {
-  background-color: inherit;
-  border: 2px solid #fff;
-}
-
-.member-btn .btn-lg a {
-  display: block;
-  background-color: #00A728;
-  color: #fff;
-  font-size: 18px;
-  padding: 15px 0;
-  border-radius: 50px;
-  border: 1px solid #00A728;
-  text-align: center;
-  position: relative;
-  -webkit-transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
-  transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
-}
-
-@media screen and (max-width: 768px) {
-  .member-btn .btn-lg a {
-    font-size: 16px;
-  }
-}
-
-.member-btn .btn-lg a:hover {
-  background-color: #fff;
-  color: #00A728;
-}
-
-.member-btn .btn-lg a:hover::before {
-  background: url(../img/icon/angle_right_green.svg) no-repeat;
-}
-
-.member-btn .btn-lg a::before {
-  content: '';
-  display: block;
-  width: 5px;
-  height: 8px;
-  background: url(../img/icon/angle_right_white.svg) no-repeat;
-  background-size: 5px 8px;
-  position: absolute;
-  top: calc(50% - 4px);
-  left: 20px;
 }
 
 .member-hr {
@@ -1978,11 +1822,11 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .banner-view-swiper .bg-img1 {
@@ -2451,6 +2295,136 @@ section {
   .card-img-omoi-logo {
     width: 38px;
   }
+}
+
+.section-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.member-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .member-btn {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.btn-common {
+  display: block;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  -webkit-transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.btn-common:hover {
+  background-color: #fff;
+  color: #00A728;
+}
+
+.btn-common:hover::before {
+  background: url(../img/icon/angle_right_green.svg) no-repeat;
+}
+
+.btn-common::before {
+  content: '';
+  display: block;
+  width: 5px;
+  height: 8px;
+  background: url(../img/icon/angle_right_white.svg) no-repeat;
+  background-size: 5px 8px;
+  position: absolute;
+  top: calc(50% - 4px);
+}
+
+.btn-size-sm {
+  width: 120px;
+  margin: 0 10px;
+  font-size: 16px;
+  border-radius: 30px;
+  padding: 7px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .btn-size-sm {
+    width: 90px;
+    font-size: 14px;
+  }
+}
+
+.btn-size-sm::before {
+  left: 12px;
+}
+
+.btn-size-md {
+  width: 190px;
+  margin: 0 10px;
+  font-size: 16px;
+  border-radius: 30px;
+  padding: 7px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .btn-size-md {
+    width: 130px;
+    font-size: 14px;
+  }
+}
+
+.btn-size-md::before {
+  left: 12px;
+}
+
+.btn-size-lg {
+  width: 240px;
+  margin: 0 15px;
+  font-size: 18px;
+  padding: 15px 0;
+  border-radius: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .btn-size-lg {
+    font-size: 16px;
+    width: 280px;
+    margin: 0 0 25px;
+  }
+  .btn-size-lg:last-child {
+    margin: 0;
+  }
+}
+
+.btn-size-lg::before {
+  left: 20px;
+}
+
+.btn-color-main-default {
+  background-color: #00A728;
+  border: 1px solid #00A728;
+}
+
+.btn-color-sub-default {
+  background-color: inherit;
+  border: 2px solid #fff;
 }
 
 /* news(service)-swiper */

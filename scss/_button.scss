@@ -1,0 +1,94 @@
+.section-btn {
+  display: flex;
+  justify-content: center;
+}
+.member-btn {
+  display: flex;
+  justify-content: center;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.btn-common {
+  display: block;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+  &:hover {
+    background-color: #fff;
+    color: $primary-color;
+    &::before {
+      background: url(../img/icon/angle_right_green.svg) no-repeat;
+    }
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 8px;
+    background: url(../img/icon/angle_right_white.svg) no-repeat;
+    background-size: 5px 8px;
+    position: absolute;
+    top: calc(50% - 4px);
+  }
+}
+
+.btn-size-sm {
+  width: 120px;
+  margin: 0 10px;
+  font-size: 16px;
+  border-radius: 30px;
+  padding: 7px 0;
+  @media screen and (max-width: 768px) {
+    width: 90px;
+    font-size: 14px;
+  }
+  &::before {
+    left: 12px;
+  }
+}
+.btn-size-md {
+  width: 190px;
+  margin: 0 10px;
+
+  font-size: 16px;
+  border-radius: 30px;
+  padding: 7px 0;
+  @media screen and (max-width: 768px) {
+    width: 130px;
+    font-size: 14px;
+  }
+  &::before {
+    left: 12px;
+  }
+}
+.btn-size-lg {
+  width: 240px;
+  margin: 0 15px;
+  font-size: 18px;
+  padding: 15px 0;
+  border-radius: 50px;
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+    width: 280px;
+    margin: 0 0 25px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  &::before {
+    left: 20px;
+  }
+}
+.btn-color-main-default {
+  background-color: $primary-color;
+  border: 1px solid $primary-color;
+}
+.btn-color-sub-default {
+  background-color: inherit;
+  border: 2px solid $color-sub;
+}
