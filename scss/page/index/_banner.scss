@@ -27,33 +27,39 @@
   height: 100%;
 
   .swiper-slide {
-    display: flex;    
+    display: flex;
     justify-content: center;
     align-items: center;
   }
   // swiper-slide
   .bg-img1 {
     background-image: url(../img/banner/focacciasand_pc.jpg);
+    background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
+
     @media screen and (max-width: 768px) {
       background-image: url(../img/banner/focacciasand_sp.jpg);
-      background-size: cover;
     }
   }
   .bg-img2 {
     background-image: url(../img/banner/fami_pc.jpg);
+    background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
+
     @media screen and (max-width: 768px) {
       background-image: url(../img/banner/fami_sp.jpg);
-      background-size: cover;
     }
   }
   .bg-img3 {
     background-image: url(../img/banner/mosmd_pc.jpg);
+    background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
+
     @media screen and (max-width: 768px) {
       background-image: url(../img/banner/mosmd_sp.jpg);
-      background-size: cover;
     }
   }
   .swiper-button-prev:after,
@@ -243,7 +249,7 @@
         white-space: nowrap;
         transition: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1) 0s;
         &:hover {
-          opacity: .3;
+          opacity: 0.3;
         }
       }
     }

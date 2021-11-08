@@ -2353,37 +2353,40 @@ section {
 
 .banner-view-swiper .bg-img1 {
   background-image: url(../img/banner/focacciasand_pc.jpg);
+  background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 }
 
 @media screen and (max-width: 768px) {
   .banner-view-swiper .bg-img1 {
     background-image: url(../img/banner/focacciasand_sp.jpg);
-    background-size: cover;
   }
 }
 
 .banner-view-swiper .bg-img2 {
   background-image: url(../img/banner/fami_pc.jpg);
+  background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 }
 
 @media screen and (max-width: 768px) {
   .banner-view-swiper .bg-img2 {
     background-image: url(../img/banner/fami_sp.jpg);
-    background-size: cover;
   }
 }
 
 .banner-view-swiper .bg-img3 {
   background-image: url(../img/banner/mosmd_pc.jpg);
+  background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 }
 
 @media screen and (max-width: 768px) {
   .banner-view-swiper .bg-img3 {
     background-image: url(../img/banner/mosmd_sp.jpg);
-    background-size: cover;
   }
 }
 
@@ -2676,7 +2679,7 @@ section {
 }
 
 .banner-info .banner-info-container .info-all span:hover {
-  opacity: .3;
+  opacity: 0.3;
 }
 
 .banner-scroll {
