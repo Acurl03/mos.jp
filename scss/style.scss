@@ -1,25 +1,23 @@
-@import 'variable';
-@import 'base';
+@import './helper/variable';
+@import './base/base';
 
 // layout
-@import 'header';
-@import 'footer';
-
-
-@import 'notice';
-@import 'main';
-@import 'member';
-@import 'attest';
-@import 'feat';
-@import 'banner';
+@import './layout/header';
+@import './layout/footer';
 
 
 
 // element conponent
-@import 'card';
-@import 'button';
-
-
+@import './component/card';
+@import './component/button';
 // template conponent
-@import 'custom_swiper';
+@import './component/custom_swiper';
+
+
+@import './page/index/notice';
+@import './page/index/main';
+@import './page/index/member';
+@import './page/index/attest';
+@import './page/index/feat';
+@import './page/index/banner';
 
