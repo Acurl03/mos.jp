@@ -53,10 +53,14 @@ table {
   text-decoration: none;
 }
 
+
+
 body {
-  // background-color: rgb(182, 196, 223);
   line-height: 1.5;
 	overflow-x: hidden;
+	&.btn_open {
+		overflow-y: hidden;
+	}
 }
 
 a {

@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 0%;
   .card-img {
     min-height: 80px;
     margin-bottom: 20px;
@@ -9,13 +10,15 @@
     align-items: center;
     justify-content: center;
     transition: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
-
+    @media screen and (max-width: 768px) {
+      min-height: 55px;
+      margin-bottom: 15px;
+    }
     img {
       vertical-align: middle;
     }
   }
 
-  
   .card-title {
     font-size: 18px;
     color: $primary-color;
@@ -26,6 +29,7 @@
   }
   .card-text {
     font-size: 14px;
+    max-width: 100%;
     @media screen and (max-width: 768px) {
       font-size: 13px;
     }
@@ -33,54 +37,54 @@
 }
 
 // shop/service
+.card-img-search {
+  width: 106px;
+}
+.card-img-order {
+  width: 106px;
+}
+.card-img-service {
+  width: 80px;
+}
+.card-img-card {
+  width: 90px;
+}
+// tasty
+.card-img-omoi {
+  width: 135px;
+}
+.card-img-quality {
+  width: 81px;
+}
+.card-img-mostopi {
+  width: 96px;
+}
+.card-img-omoi-logo {
+  width: 56px;
+}
+@media screen and (max-width: 768px) {
   .card-img-search {
-    width: 106px;
+    width: 71px;
   }
   .card-img-order {
-    width: 106px;
+    width: 69px;
   }
   .card-img-service {
-    width: 80px;
+    width: 61px;
   }
   .card-img-card {
-    width: 90px;
+    width: 61px;
   }
-  // tasty
   .card-img-omoi {
-    width: 135px;
+    width: 75px;
   }
   .card-img-quality {
-    width: 81px;
+    width: 51px;
   }
   .card-img-mostopi {
-    width: 96px;
+    width: 58px;
   }
   .card-img-omoi-logo {
-    width: 56px;
+    width: 38px;
   }
-  @media screen and (max-width: 768px) {
-    .card-img-search {
-      width: 71px;
-    }
-    .card-img-order {
-      width: 69px;
-    }
-    .card-img-service {
-      width: 61px;
-    }
-    .card-img-card {
-      width: 61px;
-    }
-    .card-img-omoi {
-      width: 75px;
-    }
-    .card-img-quality {
-      width: 51px;
-    }
-    .card-img-mostopi {
-      width: 58px;
-    }
-    .card-img-omoi-logo {
-      width: 38px;
-    }
-  }
+}

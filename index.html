@@ -806,13 +806,15 @@
 <script src="./js/custom_swiper.js"></script>
 
 <script>
-  const btn = document.querySelector('.m-nav-btn')
-  const btn_top = document.querySelector('.top_bar')
-  const btn_mid = document.querySelector('.mid_bar')
-  const btn_bot = document.querySelector('.bot_bar')
-  const m_menu = document.querySelector('.nav-link')
-  const header = document.querySelector('.header-section')
-  const nav = document.querySelector('.nav-wrap')
+  let btn = document.querySelector('.m-nav-btn')
+  let btn_top = document.querySelector('.top_bar')
+  let btn_mid = document.querySelector('.mid_bar')
+  let btn_bot = document.querySelector('.bot_bar')
+  let m_menu = document.querySelector('.nav-link')
+  let header = document.querySelector('.header-section')
+  let nav = document.querySelector('.nav-wrap')
+  let body = document.querySelector('body')
+
   // btn click
   btn.addEventListener('click', function () {
     btn.classList.toggle("btn_open")
@@ -820,6 +822,7 @@
     btn_mid.classList.toggle("btn_open")
     btn_bot.classList.toggle("btn_open")
     m_menu.classList.toggle("btn_open")
+    body.classList.toggle("btn_open")
   })
   // nav fixed
   window.onscroll = function () {

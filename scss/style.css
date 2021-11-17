@@ -64,6 +64,10 @@ body {
   overflow-x: hidden;
 }
 
+body.btn_open {
+  overflow-y: hidden;
+}
+
 a {
   text-decoration: none;
   color: #000;
@@ -198,7 +202,7 @@ a {
     background-color: #00a728;
     top: 0;
     left: 0;
-    z-index: 9;
+    z-index: 150;
     opacity: 1;
   }
 }
@@ -214,7 +218,7 @@ a {
 @media screen and (max-width: 1023px) {
   .header-section .nav-wrap .nav-container .nav-link .nav-link-items {
     display: block;
-    margin: 0;
+    margin: 0 0 25px;
     border-bottom: 1px solid #73c787;
   }
 }
@@ -369,6 +373,7 @@ a {
   .header-section .nav-wrap .nav-container .nav-link .nav-link-utility {
     display: block;
     border-bottom: 1px solid #73c787;
+    margin: 0 0 25px;
   }
 }
 
@@ -608,7 +613,7 @@ a {
     padding: 0;
     margin-left: 20px;
     position: relative;
-    z-index: 10;
+    z-index: 200;
   }
   .header-section .nav-wrap .nav-container .m-nav-btn.btn_open {
     position: absolute;
@@ -965,6 +970,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-width: 0%;
 }
 
 .card .card-img {
@@ -981,6 +987,13 @@ footer {
           justify-content: center;
   -webkit-transition: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
   transition: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+@media screen and (max-width: 768px) {
+  .card .card-img {
+    min-height: 55px;
+    margin-bottom: 15px;
+  }
 }
 
 .card .card-img img {
@@ -1001,6 +1014,7 @@ footer {
 
 .card .card-text {
   font-size: 14px;
+  max-width: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -1098,6 +1112,12 @@ footer {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .member-btn > li:last-child .btn-size-lg {
+    margin: 0;
+  }
+}
+
 .btn-default {
   display: block;
   color: #fff;
@@ -1178,9 +1198,6 @@ footer {
     font-size: 16px;
     width: 280px;
     margin: 0 0 25px;
-  }
-  .btn-size-lg:last-child {
-    margin: 0;
   }
 }
 
