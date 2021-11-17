@@ -12,10 +12,16 @@
     content="width=device-width, initial-scale=1.0"
   >
   <title>MOS.JP</title>
-  <!-- swiper -->
+  <!-- swiper7 -->
   <link
     rel="stylesheet"
     href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+  />
+  <!-- swiper slick -->
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
   />
   <link
     rel="stylesheet"
@@ -381,8 +387,14 @@
         </div>
 
         <ul class="section-btn">
-          <li><a class="btn-default btn-size-md btn-color-main-default" href="javascript:;">メニュー</a></li>
-          <li><a class="btn-default btn-size-md btn-color-main-default" href="javascript:;">キャンペーン</a></li>
+          <li><a
+              class="btn-default btn-size-md btn-color-main-default"
+              href="javascript:;"
+            >メニュー</a></li>
+          <li><a
+              class="btn-default btn-size-md btn-color-main-default"
+              href="javascript:;"
+            >キャンペーン</a></li>
         </ul>
       </div>
     </section>
@@ -465,7 +477,10 @@
           </li>
         </ul>
         <ul class="section-btn">
-          <li><a class="btn-default btn-size-sm btn-color-main-default" href="javascript:;">一覧</a></li>
+          <li><a
+              class="btn-default btn-size-sm btn-color-main-default"
+              href="javascript:;"
+            >一覧</a></li>
 
         </ul>
       </div>
@@ -616,8 +631,14 @@
               </a></li>
           </ul>
           <ul class="member-btn">
-            <li><a class="btn-default btn-size-lg btn-color-main-default" href="javascipt:;">会員登録</a></li>
-            <li><a class="btn-default btn-size-lg btn-color-sub-default" href="javascipt:;">会員の方はこちら</a></li>
+            <li><a
+                class="btn-default btn-size-lg btn-color-main-default"
+                href="javascipt:;"
+              >会員登録</a></li>
+            <li><a
+                class="btn-default btn-size-lg btn-color-sub-default"
+                href="javascipt:;"
+              >会員の方はこちら</a></li>
           </ul>
         </div>
         <hr class="member-hr">
@@ -792,50 +813,60 @@
       <p class="right">COPYRIGHT © 2021 MOS FOOD SERVICES, INC. ALL RIGHTS RESERVED.</p>
 
   </footer>
+
+
+  <!-- jQ -->
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"
+  ></script>
+  <!-- swiper -->
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+  <script
+    type="text/javascript"
+    src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+  ></script>
+
+  <script src="./js/pagetop.js"></script>
+  <script src="./js/custom_swiper.js"></script>
+  <script src="./js/swiper_slick.js"></script>
+
+
+  <script>
+    let btn = document.querySelector('.m-nav-btn')
+    let btn_top = document.querySelector('.top_bar')
+    let btn_mid = document.querySelector('.mid_bar')
+    let btn_bot = document.querySelector('.bot_bar')
+    let m_menu = document.querySelector('.nav-link')
+    let header = document.querySelector('.header-section')
+    let nav = document.querySelector('.nav-wrap')
+    let body = document.querySelector('body')
+
+    // btn click
+    btn.addEventListener('click', function () {
+      btn.classList.toggle("btn_open")
+      btn_top.classList.toggle("btn_open")
+      btn_mid.classList.toggle("btn_open")
+      btn_bot.classList.toggle("btn_open")
+      m_menu.classList.toggle("btn_open")
+      body.classList.toggle("btn_open")
+    })
+    // nav fixed
+    window.onscroll = function () {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        header.classList.add('nav-fixed')
+        nav.classList.add('nav-fixed')
+      } else {
+        header.classList.remove('nav-fixed')
+        nav.classList.remove('nav-fixed')
+      }
+
+    }
+  </script>
 </body>
 
-<!-- swiper -->
-<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-<!-- jQ -->
-<script
-  src="https://code.jquery.com/jquery-3.6.0.js"
-  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-  crossorigin="anonymous"
-></script>
-<script src="./js/pagetop.js"></script>
-<script src="./js/custom_swiper.js"></script>
-
-<script>
-  let btn = document.querySelector('.m-nav-btn')
-  let btn_top = document.querySelector('.top_bar')
-  let btn_mid = document.querySelector('.mid_bar')
-  let btn_bot = document.querySelector('.bot_bar')
-  let m_menu = document.querySelector('.nav-link')
-  let header = document.querySelector('.header-section')
-  let nav = document.querySelector('.nav-wrap')
-  let body = document.querySelector('body')
-
-  // btn click
-  btn.addEventListener('click', function () {
-    btn.classList.toggle("btn_open")
-    btn_top.classList.toggle("btn_open")
-    btn_mid.classList.toggle("btn_open")
-    btn_bot.classList.toggle("btn_open")
-    m_menu.classList.toggle("btn_open")
-    body.classList.toggle("btn_open")
-  })
-  // nav fixed
-  window.onscroll = function () {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      header.classList.add('nav-fixed')
-      nav.classList.add('nav-fixed')
-    } else {
-      header.classList.remove('nav-fixed')
-      nav.classList.remove('nav-fixed')
-    }
-
-  }
-</script>
 
 
 </html>
